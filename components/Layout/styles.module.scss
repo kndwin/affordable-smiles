@@ -1,0 +1,55 @@
+.container {
+	position: relative;
+	height: 100%;
+	min-height: 100vh;
+	width: clamp(30em, 100%, 80em);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	.radial1 {
+		position: absolute;
+		top: 0;
+		right: -25%;
+		background: radial-gradient(
+			circle at top, 
+			var(--p1) -30%, 
+			white 40%
+			);
+		z-index: -1;
+		height: 30em;
+		width: 30em; 
+	}
+	.radial2 {
+		position: absolute;
+		top: 0;
+		left: -25%;
+		background: radial-gradient(
+			ellipse at left, 
+			var(--p1) -50%, 
+			white 40%
+			);
+		z-index: -1;
+		height: 100%;
+		width: 100%; 
+	}
+	.header{
+		padding: 1em;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.logo {
+			color: var(--p1);
+			font-size: 2em; 
+		}
+		.links {
+			.link {
+				margin: 1em;
+			}
+		}
+	}
+	.main {
+		flex: 1;
+	}
+	.footer {
+	}
+}
