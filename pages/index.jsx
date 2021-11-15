@@ -2,14 +2,18 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Head from "next/head";
 import styles from "./index.module.scss";
-import { Layout, Button, Box } from "components";
-import { useState } from "react";
+import { Layout, Button, Box, Mouth } from "components";
+import { useEffect, useState, Suspense } from "react";
 
 export default function Home() {
   const [card, setCard] = useState(false);
   const toggleCard = () => {
     setCard(!card);
   };
+  const [mounted, setMounted] = useState();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <Layout>
       <Head>
@@ -34,6 +38,18 @@ export default function Home() {
           <Box position={[0, 0, 0]} toggleCard={toggleCard} />
           <OrbitControls />
         </Canvas>
+        {mounted && (
+          <Canvas
+            orthographic
+            camera={{ zoom: 20 }}
+          >
+            <Suspense fallback={null}>
+              <ambientLight intensity={0.7} />
+              <Mouth />
+							<OrbitControls />
+            </Suspense>
+          </Canvas>
+        )}
       </div>
       {card && <h1>card toggled</h1>}
     </Layout>
