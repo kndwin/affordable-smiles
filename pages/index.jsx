@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Head from "next/head";
 import styles from "./index.module.scss";
-import { Layout, Button, Box, Mouth } from "components";
+import { Layout, Button, FullDenture, Implant } from "components";
 import { useEffect, useState, Suspense } from "react";
 
 export default function Home() {
@@ -26,29 +26,24 @@ export default function Home() {
       <h2>No compromise on quality</h2>
       <Button>GET A QUOTE</Button>
       <div className={styles.boxesContainer}>
-        <Canvas>
-          <ambientLight />
-          <pointLight position={[5, 5, 5]} />
-          <Box position={[0, 0, 0]} toggleCard={toggleCard} />
-          <OrbitControls />
-        </Canvas>
-        <Canvas>
-          <ambientLight />
-          <pointLight position={[5, 5, 5]} />
-          <Box position={[0, 0, 0]} toggleCard={toggleCard} />
-          <OrbitControls />
-        </Canvas>
         {mounted && (
-          <Canvas
-            orthographic
-            camera={{ zoom: 20 }}
-          >
-            <Suspense fallback={null}>
-              <ambientLight intensity={0.7} />
-              <Mouth />
-							<OrbitControls />
-            </Suspense>
-          </Canvas>
+          <>
+            <Canvas orthographic camera={{ position: [10, 20, 50], zoom: 4 }}>
+              <Suspense fallback={null}>
+                <pointLight position={[0, 70, 50]} intensity={1.5} />
+                <pointLight position={[0, -100, 50]} intensity={1.5} />
+                <FullDenture />
+                <OrbitControls />
+              </Suspense>
+            </Canvas>
+            <Canvas orthographic camera={{ position: [10, 20, 10], zoom: 16 }}>
+              <Suspense fallback={null}>
+                <pointLight position={[0, 20, 30]} intensity={1.5} />
+                <Implant />
+                <OrbitControls />
+              </Suspense>
+            </Canvas>
+          </>
         )}
       </div>
       {card && <h1>card toggled</h1>}

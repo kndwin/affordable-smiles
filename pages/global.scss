@@ -1,16 +1,95 @@
 :root {
-	--p1: #008999; // primary color
-	--s1: #eaf6f7; // secondary color
+	--p: #008999; // primary color
+	--s: #eaf6f7; // secondary color
+	--sm: #b0dbe1; // secondary muted color
+	--slm: #d5eaed; // secondary light muted color
+	--sd: #00636f; // secondary dark color
 	--white: #fff;
 }
 
+@font-face {
+	font-family: Causten;
+	src: url("../utils/fonts/Causten-Regular.otf") format("opentype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Causten;
+	src: url("../utils/fonts/Causten-Bold.otf") format("opentype");
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: Causten;
+	src: url("../utils/fonts/Causten-SemiBold.otf") format("opentype");
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: Poppins;
+	src: url("../utils/fonts/poppins-light.ttf") format(""truetype"");
+	font-weight: 300;
+}
+
 html, body {
-	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
+h1, h2, h3, h4 {
+	font-family: Causten;
+	line-height: 1em;
+	margin: 0; 
+	letter-spacing: -5%; 
+}
+
+h1, h2, h3 {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 60pt;
+}
+
+h2 {
+	font-size: 48pt;
+}
+
+h3 {
+	font-size: 36pt;
+}
+
+h4 {
+	font-size: 20pt;
+	font-weight: 400;
+}
+
+.sb1 {
+	font-family: Causten;
+	font-size: 18pt;
+	letter-spacing: -5%;
+	line-height: 1em;
+	font-weight: 400;
+}
+
+.sb2 {
+	font-family: Causten;
+	font-size: 16pt;
+	letter-spacing: -5%;
+	line-height: 1em;
+	font-weight: 400;
+}
+
+p {
+	font-family: Poppins;
+	font-weight: 300;
+	font-size: 14pt;
+	line-height: 1.5em;
+}
+
 a {
-	color: var(--p1);
+	font-family: Causten;
+	font-size: 20pt;
+	color: var(--sd);
 	text-decoration: none;
 }

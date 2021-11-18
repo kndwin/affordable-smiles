@@ -1,5 +1,7 @@
 export { Layout } from './Common/Layout'
 export { Button } from './Common/Button'
+export { NavLink } from './Common/NavLink'
 
 export { Box } from './Models/Box'
-export { Mouth } from './Models/AcrylicLowerJawScan'
+export { FullDenture  } from './Models/FullDenture'
+export { Implant  } from './Models/Implant'
