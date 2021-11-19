@@ -1,6 +1,50 @@
-.boxesContainer{
-	width: 100%;
-	height: 20em; 
-	display: flex;
+.catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4em;
+  .catalogTagline {
+    display: flex;
+    align-items: center;
+    h4 {
+      margin-left: 1em;
+      color: black;
+    }
+    margin-bottom: 2em;
+  }
+}
+.boxesContainer {
+  width: 100%;
+  height: 20em;
+  display: flex;
+  padding: 0 4em;
+}
+.denturesAndImplantsWrapper {
+  display: flex;
+  .denturesWrapper {
+		flex: 1; 
+    .dentureTagline {
+      display: flex;
+      width: 100%;
+      .button {
+        margin-left: 1em;
+      }
+    }
+  }
+  .implantsWrapper {
+		flex: 1; 
+    .implantsTagline {
+      display: flex;
+      width: 100%;
+      .button {
+        margin-left: 1em;
+      }
+    }
+  }
+}
 
+.heroTagline {
+  margin: 8em;
+  .button {
+    margin: 1em 0;
+  }
 }

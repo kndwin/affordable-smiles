@@ -1,8 +1,9 @@
 .selected {
-	padding: 1em;
-	background-color: var(--sm)
+	padding: 4em 1.5em 1.5em 1.5em;
+	background-color: var(--sm);
+	font-weight: bold;
 }
 .notSelected {
-	padding: 1em;
-	background-color: var(--slm)
+	padding: 4em 1.5em 1.5em 1.5em;
+	background-color: var(--slm);
 }

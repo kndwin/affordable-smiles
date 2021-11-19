@@ -1,22 +1,24 @@
 import styles from "./styles.module.scss";
 import { Button, NavLink } from "components";
+import Logo from "../../../public/svg/logo.svg";
 
 export const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.radial1} />
-      <div className={styles.radial2} />
       <header className={styles.header}>
-        <div className={styles.logo}>Affordable smiles</div>
+        <Logo className={styles.logo} />
         <div className={styles.links}>
           <NavLink path="/" label="Home" />
+          <NavLink path="/services" label="Services" />
           <NavLink path="/about-us" label="About us" />
-          <NavLink path="/pricing" label="Pricing" />
+          <NavLink path="/media" label="In the media" />
           <NavLink path="/contact" label="Contact & Location" />
-          <Button>BOOK AN APPOINTMENT</Button>
         </div>
-      </header>
-      <main className={styles.main}>{children}</main>
+				<div className={styles.buttonWrapper}>
+					<Button>BOOK AN APPOINTMENT</Button>
+				</div>
+			</header>
+			<main className={styles.main}>{children}</main>
       <footer className={styles.footer}>footer</footer>
     </div>
   );

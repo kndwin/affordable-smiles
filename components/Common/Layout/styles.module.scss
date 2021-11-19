@@ -2,46 +2,27 @@
 	position: relative;
 	height: 100%;
 	min-height: 100vh;
-	width: clamp(30em, 100%, 80em);
+	width: clamp(30em, 100%, 90em);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	.radial1 {
-		position: absolute;
-		top: 0;
-		right: -25%;
-		background: radial-gradient(
-			circle at top, 
-			var(--p1) -30%, 
-			white 40%
-			);
-		z-index: -1;
-		height: 30em;
-		width: 30em; 
-	}
-	.radial2 {
-		position: absolute;
-		top: 0;
-		left: -25%;
-		background: radial-gradient(
-			ellipse at left, 
-			var(--p1) -50%, 
-			white 40%
-			);
-		z-index: -1;
-		height: 100%;
-		width: 100%; 
-	}
 	.header{
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
 		.logo {
 			color: var(--p1);
-			font-size: 2em; 
+			width: 20em;
 		}
 		.links {
 			display: flex;
+		}
+		.logo {
+			margin-bottom: 2em; 
+		}
+
+		.buttonWrapper {
+			margin-bottom: 1em;
 		}
 	}
 	.main {

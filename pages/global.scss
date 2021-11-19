@@ -1,5 +1,6 @@
 :root {
 	--p: #008999; // primary color
+	--pd:  ; // primary dark
 	--s: #eaf6f7; // secondary color
 	--sm: #b0dbe1; // secondary muted color
 	--slm: #d5eaed; // secondary light muted color
@@ -27,7 +28,7 @@
 
 @font-face {
 	font-family: Poppins;
-	src: url("../utils/fonts/poppins-light.ttf") format(""truetype"");
+	src: url("../utils/fonts/Poppins-Light.ttf") format(""truetype"");
 	font-weight: 300;
 }
 
@@ -41,6 +42,7 @@ h1, h2, h3, h4 {
 	line-height: 1em;
 	margin: 0; 
 	letter-spacing: -5%; 
+	color: var(--sd);
 }
 
 h1, h2, h3 {
@@ -48,25 +50,25 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 60pt;
+	font-size: 60px;
 }
 
 h2 {
-	font-size: 48pt;
+	font-size: 48px;
 }
 
 h3 {
-	font-size: 36pt;
+	font-size: 36px;
 }
 
 h4 {
-	font-size: 20pt;
+	font-size: 20px;
 	font-weight: 400;
 }
 
 .sb1 {
 	font-family: Causten;
-	font-size: 18pt;
+	font-size: 18px;
 	letter-spacing: -5%;
 	line-height: 1em;
 	font-weight: 400;
@@ -83,13 +85,13 @@ h4 {
 p {
 	font-family: Poppins;
 	font-weight: 300;
-	font-size: 14pt;
+	font-size: 14px;
 	line-height: 1.5em;
 }
 
 a {
 	font-family: Causten;
-	font-size: 20pt;
+	font-size: 20px;
 	color: var(--sd);
 	text-decoration: none;
 }
