@@ -1,17 +1,17 @@
 .heroWrapper {
-	height: 100vh;
-	max-height: 47em; 
+  height: 100vh;
+  max-height: 47em;
   .heroImage {
     position: absolute;
     top: 0;
     z-index: -1;
     width: 100%;
     height: 100%;
-		max-height: 53em; 
+    max-height: 53em;
     object-fit: cover;
-		object-position: top;
-		border-bottom-left-radius: 50% 7em; 
-		border-bottom-right-radius: 50% 7em ; 
+    object-position: top;
+    border-bottom-left-radius: 50% 7em;
+    border-bottom-right-radius: 50% 7em;
   }
   .heroTagline {
     position: relative;
@@ -27,6 +27,7 @@
 .catalog {
   display: flex;
   flex-direction: column;
+  padding-bottom: 1em;
   .catalogTagline {
     display: flex;
     align-items: center;
@@ -34,30 +35,31 @@
       margin-left: 1em;
       color: black;
     }
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 }
 .healthFunds {
-	display: flex;
-	flex-direction: column;
-	.healthFundLogos {
-		margin: 3em 0 6em 0; 
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		.healthFundLogo {
-			margin-right: 2em; 
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  padding-bottom: 5em;
+  .healthFundLogos {
+    margin: 3em 0 6em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .healthFundLogo {
+      margin-right: 2em;
+    }
+  }
 }
 .boxesContainer {
   width: 100%;
-  height: 20em;
-	padding: 2em 0 6em 0; 
+  height: 30em;
   display: flex;
-	.canvas {
-		width: 100%;
-	}
+  .canvas {
+    width: 100%;
+  }
 }
 .denturesAndImplantsWrapper {
   display: flex;
@@ -65,9 +67,10 @@
     flex: 1;
     .dentureTagline {
       display: flex;
+			align-items: flex-end;
       width: 100%;
       .button {
-        margin-left: 1em;
+        margin-left: 2em;
       }
     }
   }
@@ -75,15 +78,22 @@
     flex: 1;
     .implantsTagline {
       display: flex;
+			align-items: flex-end;
       width: 100%;
       .button {
-        margin-left: 1em;
+        margin-left: 2em;
       }
     }
   }
 }
 
-.reviews {
-	background-color: var(--slm);
-	padding: 3em 0; 
+.reviewsWrapper {
+	position: relative;
+	margin-left: -50vw; 
+	margin-right: -50vw; 
+	left: 50%;
+  background-color: var(--slm);
+  .reviews {
+    padding: 5em 9em 10em 9em;
+  }
 }

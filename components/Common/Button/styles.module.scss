@@ -14,10 +14,11 @@
 }
 
 .ghost.button {
-	background-color: rgba(192, 224, 229, 0.1);
+	background-color: var(--slm);
 	border: 1px solid var(--p);
 	color: var(--p);
 	box-shadow: none;
+	padding: .6em 1.5em;
 	font-size: 16px;
 	font-weight: 400;
 }
