@@ -58,14 +58,23 @@ export default function Home() {
                     camera={{ position: [10, 20, 50], zoom: 6 }}
                   >
                     <Suspense fallback={null}>
-                      <pointLight position={[40, 40, 30]} intensity={1} />
-                      <pointLight position={[-40, -40, 30]} intensity={1} />
-                      <pointLight position={[0, 40, 30]} intensity={1} />
-                      <pointLight position={[40, 0, 30]} intensity={1} />
-                      <pointLight position={[0, -40, 30]} intensity={1} />
-                      <pointLight position={[-40, 0, 30]} intensity={1} />
+                      <pointLight position={[0, 0 , 60]} intensity={1} />
+                      <pointLight position={[0, 0, -60]} intensity={1} />
+                      <pointLight position={[0, 60 , 60]} intensity={1} />
+                      <pointLight position={[0, 60, -60]} intensity={1} />
+                      <pointLight position={[0, -60 , 60]} intensity={1} />
+                      <pointLight position={[0, -60, -60]} intensity={1} />
+                      <pointLight position={[60, 60 , 60]} intensity={1} />
+                      <pointLight position={[60, 60, -60]} intensity={1} />
+                      <pointLight position={[-60, 60 , 60]} intensity={1} />
+                      <pointLight position={[-60, 60, -60]} intensity={1} />
                       <FullDenture />
-                      <OrbitControls enableZoom={false} />
+                      <OrbitControls
+												minPolarAngle={Math.PI / 2}
+												maxPolarAngle={Math.PI / 2}
+                        enablePan={false}
+                        enableZoom={false}
+                      />
                     </Suspense>
                   </Canvas>
                 )}
@@ -119,6 +128,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.reviewsWrapper}>
+					<div className={styles.background} />
           <div className={styles.reviews}>
             <h3>What our customers say about us</h3>
           </div>

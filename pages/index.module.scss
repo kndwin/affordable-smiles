@@ -89,11 +89,18 @@
 
 .reviewsWrapper {
 	position: relative;
-	margin-left: -50vw; 
-	margin-right: -50vw; 
-	left: 50%;
-  background-color: var(--slm);
+	height: fit-content; 
+	.background {
+		z-index: -9999; 
+		position: absolute;
+		height: 15em; 
+		width: 100vw;
+		left: -50%; 
+		right: -50vw; 
+		background-color: var(--slm);
+	}
   .reviews {
-    padding: 5em 9em 10em 9em;
+		color: black; 
+    padding: 5em 0 10em 0;
   }
 }

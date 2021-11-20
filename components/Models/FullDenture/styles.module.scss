@@ -1,7 +1,18 @@
 .circle {
-	height: 1em;
-	width: 1em;
+	height: 3em;
+	width: 3em;
 	border-radius: 50%; 
 	background-color: var(--sd); 
 	z-index: 2; 
+	&::after {
+		content: "";
+		position: absolute;
+		top: .25em;
+		left: .25em;
+		width: 2.5em;
+		height: 2.5em;
+		border-radius: 50%;
+		background-color: white;
+		z-index: 1;
+	}
 }
