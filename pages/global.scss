@@ -2,8 +2,8 @@
 	--p: #008999; // primary color
 	--pd:  ; // primary dark
 	--s: #eaf6f7; // secondary color
-	--sm: #b0dbe1; // secondary muted color
-	--slm: #d5eaed; // secondary light muted color
+	--sm: #d5eaed; // secondary muted color
+	--slm: #E8F2F3; // secondary light muted color
 	--sd: #00636f; // secondary dark color
 	--white: #fff;
 }
@@ -41,8 +41,8 @@ h1, h2, h3, h4 {
 	font-family: Causten;
 	line-height: 1em;
 	margin: 0; 
-	letter-spacing: -5%; 
 	color: var(--sd);
+	letter-spacing: -3px;
 }
 
 h1, h2, h3 {
@@ -64,12 +64,12 @@ h3 {
 h4 {
 	font-size: 20px;
 	font-weight: 400;
+	letter-spacing: -1px;
 }
 
 .sb1 {
 	font-family: Causten;
 	font-size: 18px;
-	letter-spacing: -5%;
 	line-height: 1em;
 	font-weight: 400;
 }
@@ -77,7 +77,6 @@ h4 {
 .sb2 {
 	font-family: Causten;
 	font-size: 16pt;
-	letter-spacing: -5%;
 	line-height: 1em;
 	font-weight: 400;
 }
@@ -87,6 +86,7 @@ p {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 1.5em;
+
 }
 
 a {

@@ -4,7 +4,7 @@
 	width: fit-content;
 	background-color: var(--p);
 	color: var(--white);
-	padding: .5em 1.5em;
+	padding: .75em 1.5em;
 	border: none;
 	cursor: pointer;
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
@@ -15,7 +15,7 @@
 
 .ghost.button {
 	background-color: rgba(192, 224, 229, 0.1);
-	border: 2px solid var(--p);
+	border: 1px solid var(--p);
 	color: var(--p);
 	box-shadow: none;
 	font-size: 16px;

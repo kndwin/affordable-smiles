@@ -8,7 +8,7 @@ export const NavLink = ({ path, label }) => {
     <div
       className={`${
         router.pathname == path ? styles.selected : styles.notSelected
-      }`}
+      } ${styles.linkWrapper}`}
     >
       <Link href={path}>
         <a className={`${styles.link}`}>{label}</a>
