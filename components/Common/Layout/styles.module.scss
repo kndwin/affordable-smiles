@@ -1,3 +1,5 @@
+@import 'utils/styles/variables';
+
 .container {
   position: relative;
   height: 100%;
@@ -12,25 +14,47 @@
     justify-content: space-evenly;
     align-items: flex-end;
     .logo {
-      color: var(--p1);
+      color: var(--color-p1);
       width: 20em;
+      margin-bottom: 2em;
     }
     .links {
       display: flex;
     }
-    .logo {
-      margin-bottom: 2em;
-    }
-
     .buttonWrapper {
       margin-bottom: .5em;
     }
+
+		.dropdown {
+			display: none;
+		}
+
+		@media (max-width: $breakpoint-lg) {
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 2em;
+			.logo {
+				margin: 2em 0;
+			}
+			.buttonWrapper, .links {
+				display: none;
+			}
+			.dropdown {
+				display: block;
+			}
+		}
   }
   .main {
     flex: 1;
   }
   .footer {
     padding: 4em 9em;
+		@media (max-width: $breakpoint-md) {
+			padding: 4em 5em;
+		}
+		@media (max-width: $breakpoint-sm) {
+			padding: 4em 2em ;
+		}
     .footerContent {
       display: flex;
       flex-direction: column;
@@ -48,7 +72,7 @@
           width: 60%;
           .footerLink {
             font-size: 16px;
-            color: var(--sd);
+            color: var(--color-sd);
           }
         }
         .smallLogoWrapper {

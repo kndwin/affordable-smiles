@@ -1,0 +1,28 @@
+.trigger {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+  .hamburger {
+    fill: var(--color-sd);
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.dropdownBox {
+  border: 1px solid var(--color-sd);
+  border-radius: 0.5em;
+	overflow: hidden;
+	background-color: var(--color-light);
+  .item {
+		padding: 0.5em;
+    &:hover {
+      background: var(--color-sd);
+      a {
+        color: var(--color-light);
+      }
+    }
+  }
+}

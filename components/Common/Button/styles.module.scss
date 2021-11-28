@@ -2,8 +2,8 @@
 	border-radius: 9999px;
 	height: fit-content;
 	width: fit-content;
-	background-color: var(--p);
-	color: var(--white);
+	background-color: var(--color-p);
+	color: var(--color-light);
 	padding: .75em 1.5em;
 	border: none;
 	cursor: pointer;
@@ -14,9 +14,9 @@
 }
 
 .ghost.button {
-	background-color: var(--slm);
-	border: 1px solid var(--p);
-	color: var(--p);
+	background-color: var(--color-slm);
+	border: 1px solid var(--color-p);
+	color: var(--color-p);
 	box-shadow: none;
 	padding: .6em 1.5em;
 	font-size: 16px;

@@ -1,34 +1,35 @@
 :root {
-	--p: #008999; // primary color
-	--pd:  ; // primary dark
-	--s: #eaf6f7; // secondary color
-	--sm: #d5eaed; // secondary muted color
-	--slm: #E8F2F3; // secondary light muted color
-	--sd: #00636f; // secondary dark color
-	--white: #fff;
+	--color-p: #008999; // primary color
+	--color-pd:  ; // primary dark
+	--color-s: #eaf6f7; // secondary color
+	--color-sm: #d5eaed; // secondary muted color
+	--color-slm: #E8F2F3; // secondary light muted color
+	--color-sd: #00636f; // secondary dark color
+	--color-light: #fff;
+	--color-dark: #000;
 }
 
 @font-face {
 	font-family: Causten;
-	src: url("../utils/fonts/Causten-Regular.otf") format("opentype");
+	src: url("../fonts/Causten-Regular.otf") format("opentype");
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: Causten;
-	src: url("../utils/fonts/Causten-Bold.otf") format("opentype");
+	src: url("../fonts/Causten-Bold.otf") format("opentype");
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: Causten;
-	src: url("../utils/fonts/Causten-SemiBold.otf") format("opentype");
+	src: url("../fonts/Causten-SemiBold.otf") format("opentype");
 	font-weight: 600;
 }
 
 @font-face {
 	font-family: Poppins;
-	src: url("../utils/fonts/Poppins-Light.ttf") format(""truetype"");
+	src: url("../fonts/Poppins-Light.ttf") format("truetype");
 	font-weight: 300;
 }
 
@@ -41,7 +42,7 @@ h1, h2, h3, h4 {
 	font-family: Causten;
 	line-height: 1em;
 	margin: 0; 
-	color: var(--sd);
+	color: var(--color-sd);
 	letter-spacing: -2.5px;
 }
 
@@ -92,6 +93,6 @@ p {
 a {
 	font-family: Causten;
 	font-size: 20px;
-	color: var(--sd);
+	color: var(--color-sd);
 	text-decoration: none;
 }

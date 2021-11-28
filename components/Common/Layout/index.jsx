@@ -1,9 +1,12 @@
 import Link from "next/link";
-import { Button, NavLink } from "components";
+
+import { Button, NavLink, Dropdown } from "components";
 import styles from "./styles.module.scss";
 import Logo from "../../../public/svg/logo.svg";
+import { useBreakpoints } from "hooks";
 
 export const Layout = ({ children }) => {
+  const { lg } = useBreakpoints();
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -18,6 +21,7 @@ export const Layout = ({ children }) => {
         <div className={styles.buttonWrapper}>
           <Button>BOOK AN APPOINTMENT</Button>
         </div>
+        {lg && <Dropdown className={styles.dropdown} />}
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
