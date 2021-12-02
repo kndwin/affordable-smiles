@@ -1,0 +1,28 @@
+@import 'utils/styles/variables';
+.card {
+	position: relative;
+	width: 100%; 
+	height: fit-content; 
+	padding: 3em;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; 
+	.content {
+		width: clamp(30ch, 100%, 80ch);
+	}
+	.h3 {
+		margin: .5em 0 .75em 0; 
+		color: var(--color-p);
+	}
+	.heroImage {
+		@media (max-width: $breakpoint-md) {
+			display: none;
+		}
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	p {
+		font-size: 20px;
+	}
+}

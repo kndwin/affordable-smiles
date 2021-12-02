@@ -12,14 +12,29 @@ export const Layout = ({ children }) => {
       <header className={styles.header}>
         <Logo className={styles.logo} />
         <div className={styles.links}>
-          <NavLink path="/" label="Home" />
+          <NavLink path="/" label="Home" icon="/svg/home.svg" />
           <NavLink path="/services" label="Services" />
           <NavLink path="/about-us" label="About us" />
           <NavLink path="/media" label="In the media" />
           <NavLink path="/contact" label="Contact & Location" />
         </div>
         <div className={styles.buttonWrapper}>
-          <Button>BOOK AN APPOINTMENT</Button>
+          <div className={styles.iconWithLabel}>
+            <img
+              className={styles.icon}
+              src="/svg/calendar.svg"
+              alt="Calendar icon"
+            />
+            <a className={styles.label}>Book an appointment</a>
+          </div>
+          <div className={styles.iconWithLabel}>
+            <img
+              className={styles.icon}
+              src="/svg/call.svg"
+              alt="Calendar icon"
+            />
+            <a className={styles.label}>Call</a>
+          </div>
         </div>
         {lg && <Dropdown className={styles.dropdown} />}
       </header>

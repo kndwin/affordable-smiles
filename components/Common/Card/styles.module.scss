@@ -1,7 +1,9 @@
 .card {
+	display: flex;
+	flex-direction: column;
 	border: 1px solid var(--color-sd);
 	border-radius: 10px;
-	padding: 1em; 
 	width: clamp(10em, 100%, 30em);
+	padding: 1em; 
 	background-color: white;
 }
