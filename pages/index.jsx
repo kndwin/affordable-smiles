@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Head from "next/head";
+import Image from "next/image";
 import styles from "./index.module.scss";
 import { Layout, Button, FullDenture, Implant, Dropdown } from "components";
 import { useEffect, useState, Suspense } from "react";
@@ -17,17 +18,17 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Affordable Smiles</title>
-        <meta name="description" content="No compromise on quality" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className={styles.heroWrapper}>
-        <img
-          className={styles.heroImage}
-          src="png/heroImage.png"
-          alt="Woman smiling"
-        />
-        <div className={styles.heroTagline}>
+				<title>Affordable Smiles</title>
+				<meta name="description" content="No compromise on quality" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<div className={styles.heroWrapper}>
+				<img
+					className={styles.heroImage}
+					src="/png/heroImageV2.png"
+					alt="Woman smiling"
+				/>
+				<div className={styles.heroTagline}>
           <h1>Affordable Smiles.</h1>
           <h1>Fair prices.</h1>
           <h3>No compromise on quality.</h3>
@@ -50,67 +51,40 @@ export default function Home() {
                   View all Denture options
                 </Button>
               </div>
-              <div className={styles.boxesContainer}>
-                {mounted && (
-                  <Canvas
-                    orthographic
-                    className={styles.canvas}
-                    camera={{ position: [10, 20, 50], zoom: 6 }}
-                  >
-                    <Suspense fallback={null}>
-                      <pointLight position={[0, 0 , 60]} intensity={1} />
-                      <pointLight position={[0, 0, -60]} intensity={1} />
-                      <pointLight position={[0, 60 , 60]} intensity={1} />
-                      <pointLight position={[0, 60, -60]} intensity={1} />
-                      <pointLight position={[0, -60 , 60]} intensity={1} />
-                      <pointLight position={[0, -60, -60]} intensity={1} />
-                      <pointLight position={[60, 60 , 60]} intensity={1} />
-                      <pointLight position={[60, 60, -60]} intensity={1} />
-                      <pointLight position={[-60, 60 , 60]} intensity={1} />
-                      <pointLight position={[-60, 60, -60]} intensity={1} />
-                      <FullDenture />
-                      <OrbitControls
-												minPolarAngle={Math.PI / 2}
-												maxPolarAngle={Math.PI / 2}
-                        enablePan={false}
-                        enableZoom={false}
-                      />
-                    </Suspense>
-                  </Canvas>
-                )}
-              </div>
+              <Image
+                src="/png/fullDenture.png"
+                alt="Full denture"
+                width={546}
+                height={446}
+              />
             </div>
             <div className={styles.implantsWrapper}>
               <div className={styles.implantsTagline}>
                 <h3>Implants</h3>
                 <Button className={styles.button} ghost>
                   View all Implants options
-                </Button>
-              </div>
-              <div className={styles.boxesContainer}>
-                {mounted && (
-                  <Canvas
-                    orthographic
-                    className={styles.canvas}
-                    camera={{ position: [10, 20, 10], zoom: 18 }}
-                  >
-                    <Suspense fallback={null}>
-                      <pointLight position={[0, 20, 30]} intensity={1} />
-                      <pointLight position={[0, 20, -30]} intensity={1} />
-                      <pointLight position={[-20, 0, 0]} intensity={1} />
-                      <pointLight position={[20, 0, 0]} intensity={1} />
-                      <Implant />
-                      <OrbitControls enableZoom={false} />
-                    </Suspense>
-                  </Canvas>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.healthFunds}>
-          <h2>We welcome all health funds</h2>
-          <div className={styles.healthFundLogos}>
+								</Button>
+							</div>
+							<div className={styles.boxesContainer}>
+								<Image
+									src="/png/fullDenture.png"
+									alt="Full denture"
+									width={546}
+									height={446}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className={styles.healthFunds}>
+					<div className={`${styles.fullWidth} ${styles.background}`} />
+					<img
+						className={styles.smilingWoman}
+						src="/png/woman-smiling.png"
+						alt="Smiling"
+					/>
+					<h2 className={styles.title}>We welcome all health funds</h2>
+					<div className={styles.healthFundLogos}>
             {[
               "png/bupaIcon.png",
               "png/medibankIcon.png",
@@ -128,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.reviewsWrapper}>
-					<div className={styles.background} />
+          <div className={styles.background} />
           <div className={styles.reviews}>
             <h3>What our customers say about us</h3>
           </div>
