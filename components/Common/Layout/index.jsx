@@ -1,42 +1,69 @@
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-import { Button, NavLink, Dropdown } from "components";
 import styles from "./styles.module.scss";
 import Logo from "../../../public/svg/logo.svg";
 import { useBreakpoints } from "hooks";
+import { NavLink, NavDropdown } from "components";
 
 export const Layout = ({ children }) => {
-  const { lg } = useBreakpoints();
+  const { md } = useBreakpoints();
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <Logo className={styles.logo} />
-        <div className={styles.links}>
-          <NavLink path="/" label="Home" icon="/svg/home.svg" />
-          <NavLink path="/services" label="Services" />
-          <NavLink path="/about-us" label="About us" />
-          <NavLink path="/media" label="In the media" />
-          <NavLink path="/contact" label="Contact & Location" />
-        </div>
-        <div className={styles.buttonWrapper}>
-          <div className={styles.iconWithLabel}>
-            <img
-              className={styles.icon}
-              src="/svg/calendar.svg"
-              alt="Calendar icon"
-            />
-            <a className={styles.label}>Book an appointment</a>
-          </div>
-          <div className={styles.iconWithLabel}>
-            <img
-              className={styles.icon}
-              src="/svg/call.svg"
-              alt="Calendar icon"
-            />
-            <a className={styles.label}>Call</a>
-          </div>
-        </div>
-        {lg && <Dropdown className={styles.dropdown} />}
+        {md ? (
+          <NavDropdown
+            className={styles.dropdown}
+            trigger={<GiHamburgerMenu className={styles.hamburger} />}
+						options={[
+							{ title: "Dentures" },
+							{ href: "/dentures/full", label: "Full Dentures" },
+							{ href: "/dentures/partial", label: "Partial Dentures" },
+							{ title: "Implants" },
+							{ href: "/implants/single-tooth", label: "Single Tooth Implants" },
+							{ href: "/implants/denture", label: "Implant Denture" },
+							{ href: "/implants/full-arch-bridge", label: "Full arch Implant Bridge" },
+						]}
+					/>
+				) : (
+          <>
+            <div className={styles.links}>
+              <NavLink path="/" label="Home" />
+              <NavDropdown
+                className={styles.dropdown}
+                trigger={
+                  <a className={styles.dropdownService}>
+                    Services
+                    <span className={styles.reversedTriangle} />
+                  </a>
+                }
+								options={[
+									{ title: "Dentures" },
+									{ href: "/dentures/full", label: "Full Dentures" },
+									{ href: "/dentures/partial", label: "Partial Dentures" },
+									{ title: "Implants" },
+									{ href: "/implants/single-tooth", label: "Single Tooth Implants" },
+									{ href: "/implants/denture", label: "Implant Denture" },
+									{ href: "/implants/full-arch-bridge", label: "Full arch Implant Bridge" },
+								]}
+							/>
+							<NavLink path="/about-us" label="About us" />
+              <NavLink path="/in-the-media" label="In the media" />
+              <NavLink path="/contact" label="Contact & Location" />
+            </div>
+            <div className={styles.buttonWrapper}>
+              <div className={styles.iconWithLabel}>
+                <img
+                  className={styles.icon}
+                  src="/svg/calendar.svg"
+                  alt="Calendar icon"
+                />
+                <a className={styles.label}>Book an appointment</a>
+              </div>
+            </div>
+          </>
+        )}
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>

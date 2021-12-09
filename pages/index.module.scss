@@ -2,29 +2,55 @@
 
 .heroWrapper {
   height: 100vh;
-  max-height: 47em;
+  max-height: 35em;
+  .heroImageXLContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    min-height: 40em;
+    max-height: 40em;
+    border-bottom-left-radius: 50% 15%;
+    border-bottom-right-radius: 50% 15%;
+    overflow: hidden;
+    background-color: var(--color-bgl);
+    .heroImageXL {
+      width: 30em;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 5em);
+    }
+  }
   .heroImage {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 100;
-		max-height: 47em;
-		min-height: 47em;
+    height: 100%;
+    min-height: 40em;
+    max-height: 40em;
     object-fit: cover;
     object-position: bottom;
   }
   .heroTagline {
     position: relative;
     margin: 10em 15em;
+    .title {
+      font-weight: normal;
+    }
+    .subtitle {
+      font-weight: normal;
+      color: var(--color-p);
+    }
     .button {
       margin: 1em 0;
     }
-    @media (max-width: $breakpoint-md) {
-      margin: 10em 10em;
+    @media (max-width: $breakpoint-lg) {
+      margin: 10em 8em;
     }
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint-md) {
       margin: 10em 5em;
     }
     @media (max-width: $breakpoint-sm) {
@@ -33,7 +59,6 @@
   }
 }
 .contentWrapper {
-  padding: 0 8em;
   @media (max-width: $breakpoint-md) {
     padding: 0 6em;
   }
@@ -47,14 +72,29 @@
 .catalog {
   display: flex;
   flex-direction: column;
-  padding-bottom: 1em;
-  .catalogTagline {
-    display: flex;
-    align-items: center;
-    h4 {
-      margin-left: 1em;
-      color: var(--color-dark);
+  align-items: center;
+  padding-bottom: 10em;
+  .denturesAndImplantsWrapper {
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
     }
+    background-color: var(--color-bgl);
+    width: 100%;
+		height: 30em; 
+    display: flex;
+    margin: 0 auto;
+  }
+	
+	.implants, 
+	.dentures {
+		flex: 1; 
+		width: 100%;
+		height: 100%;
+	}
+
+
+  .catalogTagline {
+    font-weight: normal;
     margin-bottom: 1em;
   }
 }
@@ -70,81 +110,49 @@
 .healthFunds {
   display: flex;
   flex-direction: column;
-  padding: 5em 0 5em 10em;
-	position: relative;
+  align-items: center;
+  padding: 5em 0 3em 10em;
+  position: relative;
 
   .background {
-		z-index: -1; 
-		top: 0; 
-		position: absolute;
+    z-index: -1;
+    top: 0;
+    position: absolute;
     height: 20em;
-    background-color: var(--color-lb);
+    background-color: var(--color-bgl);
   }
 
-	.smilingWoman {
-		object-fit: scale-down; 
-		object-position: left bottom;
-		position: absolute;
-    height: 30em;
-		margin-left: -50vw;
-		margin-right: -50vw;
-		right: 50%;
-		left: 50%;
-		bottom: calc(100% - 20em); 
-		width: 100vw;
-	}
+  .smilingWoman {
+    object-fit: scale-down;
+    object-position: left bottom;
+    position: absolute;
+    height: 25em;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    right: 50%;
+    left: 50%;
+    bottom: calc(100% - 20em);
+    width: 100vw;
+  }
 
   .title {
     font-weight: normal;
+    color: black;
   }
 
   .healthFundLogos {
-    @media (max-width: $breakpoint-lg) {
-      display: block;
-    }
-
-    margin: 3em 0 6em 0;
+    z-index: 20;
+    margin: 3em 0 0 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    .healthFundLogo {
-      margin: 0 2em 3em 0;
-    }
-  }
-}
-.boxesContainer {
-  width: 100%;
-  height: 30em;
-  display: flex;
-  .canvas {
+    justify-content: center;
+    overflow-x: auto;
     width: 100%;
-  }
-}
-.denturesAndImplantsWrapper {
-  display: flex;
-  @media (max-width: $breakpoint-lg) {
-    flex-direction: column;
-  }
-  .denturesWrapper {
-    flex: 1;
-    .dentureTagline {
-      display: flex;
-      align-items: flex-end;
-      width: 100%;
-      .button {
-        margin-left: 2em;
-      }
-    }
-  }
-  .implantsWrapper {
-    flex: 1;
-    .implantsTagline {
-      display: flex;
-      align-items: flex-end;
-      width: 100%;
-      .button {
-        margin-left: 2em;
-      }
+    .healthFundLogo {
+      margin: 0 1em;
+      max-width: 15em;
+      max-height: 4em;
+      object-fit: scale-down;
     }
   }
 }
@@ -158,9 +166,16 @@
     height: 15em;
     width: 200vw;
     left: -50vw;
-    background-color: var(--slm);
+    background: var(--bg-gradient-1);
   }
   .reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-weight: normal;
+      color: var(--color-light);
+    }
     color: black;
     padding: 5em 0 10em 0;
   }

@@ -1,15 +1,13 @@
 .button {
-	border-radius: 9999px;
+	border-radius: 5px;
 	height: fit-content;
 	width: fit-content;
 	background-color: var(--color-p);
 	color: var(--color-light);
-	padding: .75em 1.5em;
+	padding: .5em 1.25em;
 	border: none;
 	cursor: pointer;
-	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 	font-family: Causten;
-	font-weight: 600;
 	font-size: 20px;
 }
 

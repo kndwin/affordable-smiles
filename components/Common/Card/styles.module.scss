@@ -6,4 +6,25 @@
 	width: clamp(10em, 100%, 30em);
 	padding: 1em; 
 	background-color: white;
+	animation: scaleIn 0.5s ease-in-out;
+}
+
+.card.dark {
+	background: var(--bg-gradient-1);
+	color: var(--color-light);
+	border: none; 
+}
+
+.trigger {
+	border: none; 
+	background: none;
+}
+
+@keyframes scaleIn {
+	0% {
+		opacity: 0; 
+	}
+	100% {
+		opacity: 1;
+	}
 }

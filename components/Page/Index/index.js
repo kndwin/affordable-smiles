@@ -1,0 +1,1 @@
+export { FullDenture } from './FullDenture'

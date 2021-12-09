@@ -1,0 +1,51 @@
+.carouselWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    .thumbnail {
+      z-index: 5;
+      cursor: pointer;
+      border-radius: 9999px;
+      width: 5em;
+      height: 5em;
+      background-color: var(--color-grey);
+      margin: 0 0.5em;
+			padding: 1em; 
+			img {
+				object-fit: scale-down;
+			}
+    }
+		.thumbnail.selected {
+			transform: scale(1.2);
+		}
+		
+  }
+
+  .content {
+		top: 0; 
+    display: flex;
+    transition: all 0.5s ease;
+    position: absolute;
+    height: calc(100% - 5em);
+
+    .slideWrapper {
+      height: calc(100%);
+      transition: all 0.5s ease;
+      display: flex;
+      .slide {
+				margin: auto; 
+        height: fit-content;
+        width: 100%;
+      }
+    }
+  }
+}
