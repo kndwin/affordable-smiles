@@ -39,8 +39,9 @@ export const Carousel = (props) => {
           <div className={styles.thumbnails}>
             {thumbnails.map(({ url }, index) => (
               <img
-                onClick={() => setSlide(index)}
+								key={() => v4()}
                 src={url}
+                onClick={() => setSlide(index)}
                 alt="Thumbnail"
                 className={`${styles.thumbnail} ${
                   slide === index ? styles.selected : ""
