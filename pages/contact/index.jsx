@@ -1,14 +1,20 @@
-import {Layout} from 'components'
-import styles from './styles.module.scss'
+import { Layout } from "components";
+import Map from "components/Page/Contact/Map";
+import styles from "./styles.module.scss";
 
 const ContactPage = (props) => {
-	return (
-		<Layout>
-			<h1>
-				Contact Us
-			</h1>
-		</Layout>
-	)
-}
+  return (
+    <Layout>
+      <div className={styles.pageContainer}>
+        <h1>Contact Us</h1>
+				<div className={styles.mapContainer}>
 
-export default ContactPage
+				</div>
+      </div>
+    </Layout>
+  );
+};
+
+export default ContactPage;
+
+// <Map />

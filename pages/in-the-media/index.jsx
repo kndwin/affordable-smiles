@@ -4,7 +4,9 @@ import styles from './styles.module.scss'
 const InTheMediaPage = (props) => {
 	return (
 		<Layout>
-			<h1>In the media</h1>
+			<div className={styles.pageContainer}>
+				<h1>In the media</h1>
+			</div>
 		</Layout>
 	)
 }

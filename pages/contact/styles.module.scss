@@ -1,0 +1,10 @@
+@import "utils/styles/variables";
+
+.pageContainer {
+	@include responsive-page-padding(0); 
+
+	.mapContainer {
+		margin: 3em 0;
+	}
+}
+

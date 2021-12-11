@@ -47,6 +47,7 @@
     .button {
       margin: 1em 0;
     }
+
     @media (max-width: $breakpoint-lg) {
       margin: 10em 8em;
     }
@@ -59,15 +60,6 @@
   }
 }
 .contentWrapper {
-  @media (max-width: $breakpoint-md) {
-    padding: 0 6em;
-  }
-  @media (max-width: $breakpoint-sm) {
-    padding: 0 4em;
-  }
-  @media (max-width: $breakpoint-sm) {
-    padding: 0 2em;
-  }
 }
 .catalog {
   display: flex;
@@ -80,18 +72,17 @@
     }
     background-color: var(--color-bgl);
     width: 100%;
-		height: 30em; 
+    height: 30em;
     display: flex;
     margin: 0 auto;
   }
-	
-	.implants, 
-	.dentures {
-		flex: 1; 
-		width: 100%;
-		height: 100%;
-	}
 
+  .implants,
+  .dentures {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+  }
 
   .catalogTagline {
     font-weight: normal;
@@ -111,48 +102,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5em 0 3em 10em;
   position: relative;
-
-  .background {
-    z-index: -1;
-    top: 0;
-    position: absolute;
-    height: 20em;
-    background-color: var(--color-bgl);
-  }
+  height: 20em;
+  @include responsive-page-padding(0);
 
   .smilingWoman {
     object-fit: scale-down;
     object-position: left bottom;
     position: absolute;
     height: 25em;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    right: 50%;
-    left: 50%;
-    bottom: calc(100% - 20em);
-    width: 100vw;
+    left: 0;
+    bottom: 0;
   }
 
-  .title {
-    font-weight: normal;
-    color: black;
-  }
+  .content {
+		height: 100%;
+		width: calc(100% - 20em);
+		margin-left: 20em; 
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    .title {
+      font-weight: normal;
+      color: black;
+    }
 
-  .healthFundLogos {
-    z-index: 20;
-    margin: 3em 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-x: auto;
-    width: 100%;
-    .healthFundLogo {
-      margin: 0 1em;
-      max-width: 15em;
-      max-height: 4em;
-      object-fit: scale-down;
+    .healthFundLogos {
+      z-index: 20;
+      margin: 3em 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: auto;
+      width: 100%;
+      .healthFundLogo {
+        margin: 0 1em;
+        max-width: 15em;
+        max-height: 4em;
+        object-fit: scale-down;
+      }
     }
   }
 }
@@ -178,5 +167,23 @@
     }
     color: black;
     padding: 5em 0 10em 0;
+  }
+}
+
+.dentures {
+  background-image: url("../public/png/denture-background.png");
+  height: 800px;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  @include responsive-page-padding(0);
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: clamp($breakpoint-sm, 100%, $breakpoint-xl);
+    height: 100%;
   }
 }

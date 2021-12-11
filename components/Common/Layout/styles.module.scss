@@ -10,12 +10,13 @@
   overflow: hidden;
   .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+		@include responsive-page-padding(0);
     .logo {
       color: var(--color-p1);
       width: fit-content;
-      margin: 2em;
+      margin: 2em 0;
     }
     .hamburger {
       fill: var(--color-sd);
@@ -61,7 +62,6 @@
     @media (max-width: $breakpoint-md) {
       justify-content: space-between;
       align-items: center;
-      padding: 0 2em;
       .logo {
         margin: 2em 0;
       }
@@ -79,17 +79,12 @@
     flex-direction: column;
     width: 100%;
     flex: 1;
-    padding: 3em;
+    padding: 3em 0;
     box-sizing: border-box;
   }
   .footer {
     padding: 4em 9em;
-    @media (max-width: $breakpoint-md) {
-      padding: 4em 5em;
-    }
-    @media (max-width: $breakpoint-sm) {
-      padding: 4em 2em;
-    }
+		@include responsive-page-padding(4em);
     .footerContent {
       display: flex;
       flex-direction: column;

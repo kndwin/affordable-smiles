@@ -5,8 +5,6 @@ import styles from "./styles.module.scss";
 export const NavDropdown = ({ options, trigger, ...props }) => {
   const optionsHasTitles = options.some((option) => option.title);
 
-	console.log({ options })
-
   return (
     <DropdownMenu.Root {...props}>
       <DropdownMenu.Trigger className={styles.trigger}>
