@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const DenturesAndImplants = () => {
@@ -11,15 +12,33 @@ const DenturesAndImplants = () => {
           </h2>
           <div className={styles.images}>
             {[
-              { src: "/png/acrylic-denture.png", label: "Acylic Denture" },
-              { src: "/png/cosmetic-denture.png", label: "Cosmetic Denture" },
-              { src: "/png/full-denture.png", label: "Full Denture" },
-              { src: "/png/chrome-denture.png", label: "Chrome Denture" },
-            ].map(({ src, label }) => (
-              <div key={src} className={styles.denture}>
-                <img src={src} alt={label} />
-                <p className={styles.label}>{label}</p>
-              </div>
+              {
+                href: "/dentures/partial/acrylic",
+                src: "/png/acrylic-denture.png",
+                label: "Acrylic Denture",
+              },
+              {
+                href: "/dentures/partial/cosmetic",
+                src: "/png/cosmetic-denture.png",
+                label: "Cosmetic Denture",
+              },
+              {
+                href: "/dentures/full",
+                src: "/png/full-denture.png",
+                label: "Full Denture",
+              },
+              {
+                href: "/dentures/partial/chrome",
+                src: "/png/chrome-denture.png",
+                label: "Chrome Denture",
+              },
+            ].map(({ src, label, href }) => (
+              <Link href={href}>
+                <div key={src} className={styles.denture}>
+                  <img src={src} alt={label} />
+                  <p className={styles.label}>{label}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,0 +1,22 @@
+@import 'utils/styles/variables';
+
+.partialDentureContainer {
+	@include responsive-page-padding(0);
+}
+
+.cosmeticContainer,
+.chromeContainer, 
+.acrylicContainer {
+  .hero {
+    @include responsive-page-padding(0);
+    background-image: url("/png/background-1.png");
+    width: 100%;
+    height: 778px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .title {
+      color: var(--color-light);
+    }
+  }
+}

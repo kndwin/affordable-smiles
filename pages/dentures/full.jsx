@@ -4,7 +4,11 @@ import styles from './styles.module.scss'
 const FullDenturePage = (props) => {
 	return (
 		<Layout>
-			<h1>Full dentures</h1>
+			<div className={styles.fullDentureContainer}>
+				<div className={styles.hero}>
+					<h1 className={styles.title}>Full dentures</h1>
+				</div>
+			</div>
 		</Layout>
 	)
 }

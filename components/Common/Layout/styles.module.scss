@@ -10,7 +10,6 @@
   overflow: hidden;
   .header {
 		z-index: 100; 
-		margin-bottom: -9em; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +75,9 @@
       }
     }
   }
+	.header.homePageHeader {
+		margin-bottom: -9em; 
+	}
   .main {
     display: flex;
     flex-direction: column;

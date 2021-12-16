@@ -7,7 +7,7 @@ import HealthFunds from "components/Page/Index/HealthFunds";
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout isHomePage={true}>
       <Head>
         <title>Affordable Smiles</title>
         <meta name="description" content="No compromise on quality" />

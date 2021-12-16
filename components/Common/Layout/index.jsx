@@ -6,11 +6,11 @@ import Logo from "../../../public/svg/logo.svg";
 import { useBreakpoints } from "hooks";
 import { NavLink, NavDropdown } from "components";
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, isHomePage = false }) => {
   const { md } = useBreakpoints();
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
+			<header className={`${styles.header} ${isHomePage ? styles.homePageHeader : ""}`}>
         <Logo className={styles.logo} />
         {md ? (
           <NavDropdown
