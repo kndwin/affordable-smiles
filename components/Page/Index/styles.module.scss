@@ -1,3 +1,5 @@
+@import "utils/styles/variables";
+
 .pulseDot {
   z-index: 101;
   cursor: pointer;
@@ -64,30 +66,116 @@
   transition: all 0.5s ease-in-out;
 }
 
-.fullDentureContainer {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-	flex-direction: column;
-	.title {
-		color: var(--color-sd);
-		margin-bottom: 1em;
-	}
+.denturesAndImplants {
+  background-image: url("/png/denture-and-implant-background.png");
+  height: 1000px;
+  z-index: 10;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  @include responsive-page-padding(0);
 
-  .cardWrapper {
-    position: absolute;
-    .cardContent {
-      .description,
-      .title {
-        margin: 0;
-        font-size: 20px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 3em;
+    width: clamp($breakpoint-sm, 100%, $breakpoint-xl);
+    height: 100%;
+    .dentures,
+    .implants {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .images {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      .label {
+        color: var(--color-grey);
+        font-size: 24px;
       }
+      .implants,
+      .denture {
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0.5em;
+        &:hover {
+          transform: scale(1.1);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    .title {
+      font-weight: 400;
+      margin: 1em 0;
+    }
+    .fontFade {
+      color: var(--color-pm);
+    }
+    .fontLight {
+      color: var(--color-light);
+    }
+  }
+}
 
-      .title {
-        font-weight: bold;
+.healthFunds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 20em;
+	background-color: var(--color-light);
+
+  .smilingWoman {
+    object-fit: scale-down;
+    object-position: left bottom;
+    position: absolute;
+    height: 25em;
+    left: 0;
+    bottom: 0;
+  }
+
+  .logos {
+  @include responsive-page-padding(0);
+    height: 10em;
+    width: calc(100% - 20em);
+    margin-left: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-weight: normal;
+      color: black;
+    }
+
+    .healthFundLogos {
+      z-index: 20;
+      margin: 3em 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: auto;
+      width: 100%;
+      .healthFundLogo {
+        margin: 0 1em;
+        max-width: 15em;
+        max-height: 4em;
+        object-fit: scale-down;
       }
     }
   }
+	.superannuation {
+		height:10em;
+		width:100%; 
+		background-color: var(--color-grey);
+	}
 }

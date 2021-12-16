@@ -1,10 +1,11 @@
 import Head from "next/head";
 import styles from "./index.module.scss";
-import { Layout, Button  } from "components";
+import { Layout, Button, Carousel } from "components";
 import { useBreakpoints } from "hooks";
+import DenturesAndImplants from "components/Page/Index/DenturesAndImplants";
+import HealthFunds from "components/Page/Index/HealthFunds";
 
 export default function Home() {
-
   return (
     <Layout>
       <Head>
@@ -12,40 +13,32 @@ export default function Home() {
         <meta name="description" content="No compromise on quality" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero />
-      <div className={styles.contentWrapper}>
-        <Dentures />
-        <HealthFunds />
-				<Reviews />
+      <div className={styles.heroAndDenturesWrapper}>
+        <Hero />
+        <DenturesAndImplants />
       </div>
+      <HealthFunds />
+      <Reviews />
     </Layout>
   );
 }
 
-const Dentures = () => {
-  return (
-    <div className={`${styles.dentures}`}>
-      <div className={styles.content}>Dentures</div>
-    </div>
-  );
-};
-
 const Hero = () => {
-	  const { md } = useBreakpoints();
+  const { md } = useBreakpoints();
 
-  return (
-    <div className={styles.heroWrapper}>
+  const Slide1 = () => (
+    <div>
       {md ? (
         <img
           className={styles.heroImage}
-          src="/png/heroImageV2.png"
+          src="/png/hero-image.png"
           alt="Woman smiling"
         />
       ) : (
         <div className={styles.heroImageXLContainer}>
           <img
             className={styles.heroImageXL}
-            src="/png/heroImageTransparent.png"
+            src="/png/hero-image-transparent.png"
             alt="Woman Smiling"
           />
         </div>
@@ -61,37 +54,13 @@ const Hero = () => {
       </div>
     </div>
   );
-};
 
-const HealthFunds = () => {
   return (
-    <div className={styles.healthFunds}>
-      <img
-        className={styles.smilingWoman}
-        src="/png/woman-smiling.png"
-        alt="Smiling"
-      />
-			<div className={styles.content}>
-      <h3 className={styles.title}>We welcome all health funds</h3>
-      <div className={styles.healthFundLogos}>
-        {[
-          "png/bupa-logo.png",
-          "png/ahm-logo.png",
-          "png/cbhs-logo.png",
-          "png/medibank-logo.png",
-          "png/nib-logo.png",
-          "png/hcf-logo.png",
-          "png/teachers-health-logo.png",
-        ].map((image, index) => (
-          <img
-            key={index}
-            className={styles.healthFundLogo}
-            src={image}
-            alt="Health Fund Logo"
-          />
-        ))}
-      </div>
-			</div>
+    <div className={styles.heroWrapper}>
+      <Carousel>
+        <Slide1 />
+        <Slide1 />
+      </Carousel>
     </div>
   );
 };
@@ -106,39 +75,3 @@ const Reviews = () => {
     </div>
   );
 };
-
-/*
-          <div className={styles.denturesAndImplantsWrapper}>
-            <div className={styles.dentures}>
-              <Carousel
-                thumbnails={[
-                  { url: "/png/full-denture-thumbnail.png" },
-                  { url: "/png/full-denture-thumbnail.png" },
-                  { url: "/png/full-denture-thumbnail.png" },
-                  { url: "/png/full-denture-thumbnail.png" },
-                  { url: "/png/full-denture-thumbnail.png" },
-                ]}
-              >
-                <FullDenture />
-                <FullDenture />
-                <FullDenture />
-                <FullDenture />
-                <FullDenture />
-              </Carousel>
-            </div>
-            <div className={styles.implants}>
-              <Carousel
-                thumbnails={[
-                  { url: "/png/full-denture-thumbnail.png" },
-                  { url: "/png/full-denture-thumbnail.png" },
-                  { url: "/png/full-denture-thumbnail.png" },
-                ]}
-              >
-                <FullDenture />
-                <FullDenture />
-                <FullDenture />
-              </Carousel>
-            </div>
-          </div>
-
- * */

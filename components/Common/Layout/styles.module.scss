@@ -9,6 +9,8 @@
   flex-direction: column;
   overflow: hidden;
   .header {
+		z-index: 100; 
+		margin-bottom: -9em; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +61,7 @@
         }
       }
     }
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       justify-content: space-between;
       align-items: center;
       .logo {

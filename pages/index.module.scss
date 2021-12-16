@@ -1,151 +1,53 @@
 @import "utils/styles/variables";
 
-.heroWrapper {
-  height: 100vh;
-  max-height: 35em;
-  .heroImageXLContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    min-height: 40em;
-    max-height: 40em;
-    border-bottom-left-radius: 50% 15%;
-    border-bottom-right-radius: 50% 15%;
-    overflow: hidden;
-    background-color: var(--color-bgl);
-    .heroImageXL {
-      width: 30em;
+.heroAndDenturesWrapper {
+  .heroWrapper {
+    height: 60em;
+    margin-bottom: -6em;
+    .heroImageXLContainer {
       position: absolute;
-      bottom: 0;
-      left: calc(50% - 5em);
-    }
-  }
-  .heroImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    min-height: 40em;
-    max-height: 40em;
-    object-fit: cover;
-    object-position: bottom;
-  }
-  .heroTagline {
-    position: relative;
-    margin: 10em 15em;
-    .title {
-      font-weight: normal;
-    }
-    .subtitle {
-      font-weight: normal;
-      color: var(--color-p);
-    }
-    .button {
-      margin: 1em 0;
-    }
-
-    @media (max-width: $breakpoint-lg) {
-      margin: 10em 8em;
-    }
-    @media (max-width: $breakpoint-md) {
-      margin: 10em 5em;
-    }
-    @media (max-width: $breakpoint-sm) {
-      margin: 10em 2em;
-    }
-  }
-}
-.contentWrapper {
-}
-.catalog {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10em;
-  .denturesAndImplantsWrapper {
-    @media (max-width: $breakpoint-sm) {
-      flex-direction: column;
-    }
-    background-color: var(--color-bgl);
-    width: 100%;
-    height: 30em;
-    display: flex;
-    margin: 0 auto;
-  }
-
-  .implants,
-  .dentures {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-  }
-
-  .catalogTagline {
-    font-weight: normal;
-    margin-bottom: 1em;
-  }
-}
-.fullWidth {
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  left: 50%;
-  width: 100vw;
-}
-.healthFunds {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  height: 20em;
-  @include responsive-page-padding(0);
-
-  .smilingWoman {
-    object-fit: scale-down;
-    object-position: left bottom;
-    position: absolute;
-    height: 25em;
-    left: 0;
-    bottom: 0;
-  }
-
-  .content {
-		height: 100%;
-		width: calc(100% - 20em);
-		margin-left: 20em; 
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-    .title {
-      font-weight: normal;
-      color: black;
-    }
-
-    .healthFundLogos {
-      z-index: 20;
-      margin: 3em 0 0 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow-x: auto;
-      width: 100%;
-      .healthFundLogo {
-        margin: 0 1em;
-        max-width: 15em;
-        max-height: 4em;
-        object-fit: scale-down;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+			height: calc(100% + 6em); 
+      background-color: var(--color-bgl);
+			object-position: top; 
+      .heroImageXL {
+        width: 40em;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 5em);
       }
     }
+    .heroImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+			height: calc(100% + 6em); 
+      object-fit: cover;
+      object-position: bottom;
+    }
+    .heroTagline {
+      position: relative;
+      margin: 10em 15em;
+      .title {
+        font-weight: normal;
+      }
+      .subtitle {
+        font-weight: normal;
+        color: var(--color-p);
+      }
+      .button {
+        margin: 1em 0;
+      }
+      @include responsive-page-padding(0);
+    }
   }
-}
 
+}
 .reviewsWrapper {
   position: relative;
   height: fit-content;
@@ -167,23 +69,5 @@
     }
     color: black;
     padding: 5em 0 10em 0;
-  }
-}
-
-.dentures {
-  background-image: url("../public/png/denture-background.png");
-  height: 800px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  @include responsive-page-padding(0);
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: clamp($breakpoint-sm, 100%, $breakpoint-xl);
-    height: 100%;
   }
 }

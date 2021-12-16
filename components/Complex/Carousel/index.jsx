@@ -36,10 +36,26 @@ export const Carousel = (props) => {
                 </div>
               ))}
           </div>
+          <div className={styles.dots}>
+            {Array(maxItem)
+              ?.fill("⬤")
+              ?.map((dot, i) => (
+                <div
+                  key={i}
+                  onClick={() => setSlide(i)}
+                  className={`${styles.dot} ${
+                    slide === i ? styles.dotFocus : ""
+                  }`}
+                >
+                  {dot}
+                </div>
+              ))}
+          </div>
+					{/*
           <div className={styles.thumbnails}>
             {thumbnails.map(({ url }, index) => (
               <img
-								key={() => v4()}
+                key={() => v4()}
                 src={url}
                 onClick={() => setSlide(index)}
                 alt="Thumbnail"
@@ -49,6 +65,8 @@ export const Carousel = (props) => {
               />
             ))}
           </div>
+					*/}
+
         </div>
       )}
     </AutoSizer>

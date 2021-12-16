@@ -22,3 +22,34 @@ $breakpoint-xl: 1860px;
 		padding: $paddingY 3em;
 	}
 }
+
+// Responsive width
+@mixin xs {
+   @media (min-width: #{$breakpoint-xs}) {
+       @content;
+   }
+}
+
+@mixin sm {
+   @media (min-width: #{$breakpoint-sm}) {
+       @content;
+   }
+}
+
+@mixin md {
+   @media (min-width: #{$breakpoint-md}) {
+       @content;
+   }
+}
+
+@mixin lg {
+   @media (min-width: #{$breakpoint-lg}) {
+       @content;
+   }
+}
+
+@mixin xl {
+   @media (min-width: #{$breakpoint-xl}) {
+       @content;
+   }
+}

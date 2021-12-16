@@ -7,14 +7,12 @@ const ContactPage = (props) => {
     <Layout>
       <div className={styles.pageContainer}>
         <h1>Contact Us</h1>
-				<div className={styles.mapContainer}>
-
-				</div>
+        <div className={styles.mapContainer}>
+          <Map />
+        </div>
       </div>
     </Layout>
   );
 };
 
 export default ContactPage;
-
-// <Map />

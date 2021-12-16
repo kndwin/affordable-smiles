@@ -5,7 +5,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .thumbnails {
     display: flex;
@@ -19,19 +19,41 @@
       height: 5em;
       background-color: var(--color-grey);
       margin: 0 0.5em;
-			padding: 1em; 
-			img {
-				object-fit: scale-down;
-			}
+      padding: 1em;
+      img {
+        object-fit: scale-down;
+      }
     }
-		.thumbnail.selected {
-			transform: scale(1.2);
-		}
-		
+    .thumbnail.selected {
+      transform: scale(1.2);
+    }
+  }
+
+  .dots {
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    color: var(--color-light);
+    width: 100%;
+		margin-bottom: 3em;
+
+    .dot {
+      cursor: pointer;
+			color: black; 
+      opacity: 20%;
+      margin: 0 0.3em;
+      transition: all 0.5s ease;
+    }
+
+    .dotFocus {
+			color: var(--color-p);
+      opacity: 100%;
+      transition: all 0.5s ease;
+    }
   }
 
   .content {
-		top: 0; 
+    top: 0;
     display: flex;
     transition: all 0.5s ease;
     position: absolute;
@@ -42,7 +64,7 @@
       transition: all 0.5s ease;
       display: flex;
       .slide {
-				margin: auto; 
+        margin: auto;
         height: fit-content;
         width: 100%;
       }
