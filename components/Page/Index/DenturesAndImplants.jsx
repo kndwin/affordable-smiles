@@ -33,8 +33,8 @@ const DenturesAndImplants = () => {
                 label: "Chrome Denture",
               },
             ].map(({ src, label, href }) => (
-              <Link href={href}>
-                <div key={src} className={styles.denture}>
+              <Link href={href} key={src} >
+                <div className={styles.denture}>
                   <img src={src} alt={label} />
                   <p className={styles.label}>{label}</p>
                 </div>
