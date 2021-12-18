@@ -37,7 +37,9 @@ Contact us today at 1300-715-578, and we will be happy to schedule a consultatio
           <FullDentureFocused />
         </div>
         <div className={sharedStyles.markdown}>
-          <ReactMarkdown children={markdown} />
+					<ReactMarkdown>
+						{markdown}
+					</ReactMarkdown>
         </div>
       </div>
     </Layout>

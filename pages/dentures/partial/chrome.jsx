@@ -34,7 +34,9 @@ Contact us today at 1300-715-578 to discuss chrome dentures, their pros and cons
           <ChromeDentureFocused />
         </div>
         <div className={sharedStyles.markdown}>
-          <ReactMarkdown children={markdown} />
+					<ReactMarkdown>
+						{markdown}
+					</ReactMarkdown>
         </div>
       </div>
     </Layout>

@@ -40,7 +40,9 @@ When our dentists meet with you, they will perform a complete exam of your teeth
           <AcrylicDentureFocused />
         </div>
         <div className={sharedStyles.markdown}>
-          <ReactMarkdown children={markdown} />
+					<ReactMarkdown>
+						{markdown}
+					</ReactMarkdown>
         </div>
       </div>
     </Layout>
