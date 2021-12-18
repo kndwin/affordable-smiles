@@ -7,12 +7,12 @@ import { useBreakpoints } from "hooks";
 import { NavLink, NavDropdown } from "components";
 
 export const Layout = ({ children, isHomePage = false }) => {
-  const { md } = useBreakpoints();
+  const { xl } = useBreakpoints();
   return (
     <div className={styles.container}>
 			<header className={`${styles.header} ${isHomePage ? styles.homePageHeader : ""}`}>
         <Logo className={styles.logo} />
-        {md ? (
+        {xl ? (
           <NavDropdown
             className={styles.dropdown}
             trigger={<GiHamburgerMenu className={styles.hamburger} />}

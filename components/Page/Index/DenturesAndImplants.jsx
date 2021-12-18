@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 const DenturesAndImplants = () => {
   return (
-    <div className={`${styles.denturesAndImplants}`}>
+    <div className={`${styles.containerDenturesAndImplants}`}>
       <div className={styles.content}>
         <div className={styles.dentures}>
           <h2 className={styles.title}>
@@ -33,7 +33,7 @@ const DenturesAndImplants = () => {
                 label: "Chrome Denture",
               },
             ].map(({ src, label, href }) => (
-              <Link href={href} key={src} >
+              <Link href={href} key={src}>
                 <div className={styles.denture}>
                   <img src={src} alt={label} />
                   <p className={styles.label}>{label}</p>
@@ -52,14 +52,25 @@ const DenturesAndImplants = () => {
               {
                 src: "/png/full-arch-implant-bridge.png",
                 label: "Full Arch Implant Bridge",
+                href: "/implants/full-arch-bridge",
               },
-              { src: "/png/implants.png", label: "Implants" },
-              { src: "/png/implant-denture.png", label: "Implant Dentures" },
-            ].map(({ src, label }) => (
-              <div key={src} className={styles.implants}>
-                <img src={src} alt={label} />
-                <p className={styles.label}>{label}</p>
-              </div>
+              {
+                src: "/png/implants.png",
+                label: "Implants",
+                href: "/implants/single-tooth",
+              },
+              {
+                src: "/png/implant-denture.png",
+                label: "Implant Dentures",
+                href: "/implants/denture",
+              },
+            ].map(({ src, label, href }) => (
+              <Link href={href} key={src}>
+                <div className={styles.denture}>
+                  <img src={src} alt={label} />
+                  <p className={styles.label}>{label}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

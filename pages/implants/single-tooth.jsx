@@ -4,7 +4,11 @@ import styles from './styles.module.scss'
 const SingleToothPage = (props) => {
 	return (
 		<Layout>
-			<h1>Single tooth page</h1>
+			<div className={styles.containerSingleTooth}>
+				<div className={styles.hero}>
+					<h1 className={styles.title}>Full dentures</h1>
+				</div>
+			</div>
 		</Layout>
 	)
 }

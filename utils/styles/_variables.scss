@@ -3,7 +3,7 @@ $breakpoint-xs: 720px;
 $breakpoint-sm: 960px;
 $breakpoint-md: 1280px;
 $breakpoint-lg: 1440px;
-$breakpoint-xl: 1860px;
+$breakpoint-xl: 1660px;
 
 // Responsive paddings
 @mixin responsive-page-padding($paddingY) {
@@ -25,31 +25,37 @@ $breakpoint-xl: 1860px;
 
 // Responsive width
 @mixin xs {
-   @media (min-width: #{$breakpoint-xs}) {
+   @media (max-width: #{$breakpoint-xs}) {
        @content;
    }
 }
 
 @mixin sm {
-   @media (min-width: #{$breakpoint-sm}) {
+   @media (max-width: #{$breakpoint-sm}) {
        @content;
    }
 }
 
 @mixin md {
-   @media (min-width: #{$breakpoint-md}) {
+   @media (max-width: #{$breakpoint-md}) {
        @content;
    }
 }
 
 @mixin lg {
-   @media (min-width: #{$breakpoint-lg}) {
+   @media (max-width: #{$breakpoint-lg}) {
        @content;
    }
 }
 
 @mixin xl {
-   @media (min-width: #{$breakpoint-xl}) {
+   @media (max-width: #{$breakpoint-xl}) {
        @content;
    }
+}
+
+// Typography
+@mixin p {
+	font-family: Causten; 
+	font-size: 24px; 
 }

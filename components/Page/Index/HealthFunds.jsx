@@ -2,14 +2,17 @@ import styles from "./styles.module.scss";
 
 const HealthFunds = () => {
   return (
-    <div className={styles.healthFunds}>
+    <div className={styles.containerHealthFunds}>
       <img
         className={styles.smilingWoman}
         src="/png/woman-smiling.png"
         alt="Smiling"
       />
       <div className={styles.logos}>
-        <h3 className={styles.title}>We welcome all health funds</h3>
+        <h3 className={styles.title}>
+          We welcome
+          <span className={styles.bold}> all health funds</span>
+        </h3>
         <div className={styles.healthFundLogos}>
           {[
             "png/bupa-logo.png",
@@ -30,14 +33,16 @@ const HealthFunds = () => {
         </div>
       </div>
       <div className={styles.superannuation}>
-        <p>Pay for your dental care with Superannuation!</p>
-        <p>
-          Do you need help to cover the cost of your dental needs? You can
-          access your super early for a wide range of surgical dental
-          procedures,
-					<span>
-						Read More.
-					</span>
+        <h3 className={styles.title}>
+          <span className={styles.light}>Pay for your dental care with </span>
+          Superannuation!
+        </h3>
+        <p className={styles.description}>
+          Do you need help to cover the cost of your dental needs?
+          <br />
+          You can access your super early for a wide range of surgical dental
+          procedures
+          <span className={styles.link}> Read More ▸</span>
         </p>
       </div>
     </div>

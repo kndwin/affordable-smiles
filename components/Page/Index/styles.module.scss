@@ -60,13 +60,52 @@
   }
 }
 
-.card {
-  z-index: 100;
-  position: absolute;
-  transition: all 0.5s ease-in-out;
+.containerHero {
+	height: 60em;
+	margin-bottom: -6em;
+	.heroImageXLContainer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100vw;
+		height: calc(100% + 6em); 
+		background-color: var(--color-bgl);
+		object-position: top; 
+		.heroImageXL {
+			width: 40em;
+			position: absolute;
+			bottom: 0;
+			left: calc(50% - 5em);
+		}
+	}
+	.heroImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100vw;
+		height: calc(100% + 6em); 
+		object-fit: cover;
+		object-position: bottom;
+	}
+	.heroTagline {
+		position: relative;
+		margin: 10em 15em;
+		.title {
+			font-weight: normal;
+		}
+		.subtitle {
+			font-weight: normal;
+			color: var(--color-p);
+		}
+		.button {
+			margin: 1em 0;
+		}
+		@include responsive-page-padding(0);
+	}
 }
-
-.denturesAndImplants {
+.containerDenturesAndImplants {
   background-image: url("/png/denture-and-implant-background.png");
   height: 1000px;
   z-index: 10;
@@ -126,13 +165,13 @@
   }
 }
 
-.healthFunds {
+.containerHealthFunds {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 20em;
-	background-color: var(--color-light);
+  height: fit-content;
+  background-color: var(--color-light);
 
   .smilingWoman {
     object-fit: scale-down;
@@ -144,10 +183,9 @@
   }
 
   .logos {
-  @include responsive-page-padding(0);
-    height: 10em;
-    width: calc(100% - 20em);
-    margin-left: 20em;
+    @include responsive-page-padding(2em);
+    height: fit-content;
+    width: calc(100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,27 +193,101 @@
     .title {
       font-weight: normal;
       color: black;
+			.bold {
+				font-weight: bold; 
+			}
     }
 
     .healthFundLogos {
-      z-index: 20;
-      margin: 3em 0 0 0;
       display: flex;
+			flex-wrap: wrap; 
       align-items: center;
       justify-content: center;
-      overflow-x: auto;
       width: 100%;
       .healthFundLogo {
-        margin: 0 1em;
+        margin: 1em;
         max-width: 15em;
         max-height: 4em;
         object-fit: scale-down;
       }
     }
   }
-	.superannuation {
-		height:10em;
-		width:100%; 
-		background-color: var(--color-grey);
+  .superannuation {
+    height: 20em;
+    width: 100%;
+    background-color: var(--color-grey);
+    padding: 6em 0 6em 25em;
+    .title {
+      .light {
+        font-weight: 300;
+      }
+      color: var(--color-sd);
+    }
+    .description {
+      font-size: 24px;
+    }
+    .link {
+      color: var(--color-sd);
+      font-weight: bold;
+    }
+  }
+}
+
+.containerReviewsWrapper {
+  position: relative;
+  height: 150%;
+	width: 100%; 
+	background-image: url('/png/background-2.png');
+	background-repeat: no-repeat;
+	background-size: 100%; 
+  .reviews {
+		height: 100%;
+		width: 100%; 
+    display: flex;
+		flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+		padding-top: 5em; 
+    .title {
+      font-weight: normal;
+      color: var(--color-light);
+    }
+
+		.containerCard {
+			width: 100%; 
+			display: flex;
+			padding-top: 2em; 
+			justify-content: space-around;
+
+			.card {
+				width: 30%; 
+				border-radius: 10px;
+				background-color: var(--color-light); 
+				padding: 2em;
+				box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+				display: flex;
+				flex-direction: column; 
+				justify-content: space-between;
+				.textReviewer,
+				.textReview {
+					@include p;
+				}
+				.textReview {
+					margin: 0 0 1em 0; 
+				}
+				.textReviewer {
+					margin: 0; 
+					width: 100%; 
+					display: flex;
+					justify-content: flex-end;
+				}
+			}
+			@include md {
+				flex-direction: column;
+				.card {
+					width: calc(100% - 4em)
+				}
+			}
+		}
 	}
 }
