@@ -10,7 +10,7 @@ export const DentureBorderSulcusLine = (
     <path
       d="M573.223 47.2598L488.875 1.62451H0"
       stroke="url(#paint0_linear_228_2279)"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <ellipse
       cx="573.223"
@@ -28,8 +28,8 @@ export const DentureBorderSulcusLine = (
         y2="47.6882"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#1FB0C1" />
-        <stop offset="1" stop-color="#48BEB7" />
+        <stop stopColor="#1FB0C1" />
+        <stop offset="1" stopColor="#48BEB7" />
       </linearGradient>
     </defs>
   </svg>
