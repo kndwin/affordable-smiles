@@ -1,109 +1,54 @@
 @import "utils/styles/variables";
 
-.pulseDot {
-  z-index: 101;
-  cursor: pointer;
-  border-radius: 50%;
-  height: 1.5em;
-  width: 1.5em;
-  &:before {
-    content: "";
-    display: block;
-    position: relative;
-    width: 300%;
-    height: 300%;
-    top: -100%;
-    left: -100%;
-    border-radius: 50%;
-    background-color: var(--color-light);
-    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-  }
-
-  .plus {
-    position: absolute;
-    left: -5px;
-    top: -9px;
-    width: 42px;
-    height: 42px;
-    animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
-  }
-
-  @keyframes pulse-ring {
-    0% {
-      transform: scale(0.33);
-    }
-    80%,
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes pulse-dot {
-    0% {
-      transform: scale(0.8);
-    }
-    50% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0.8);
-    }
-  }
-}
-
-.pulseDot.noPulse {
-  &:before {
-    display: none;
-  }
-  .plus {
-    animation: none;
-  }
-}
-
 .containerHero {
-	height: 60em;
-	margin-bottom: -6em;
-	.heroImageXLContainer {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		width: 100vw;
-		height: calc(100% + 6em); 
-		background-color: var(--color-bgl);
-		object-position: top; 
-		.heroImageXL {
-			width: 40em;
-			position: absolute;
-			bottom: 0;
-			left: calc(50% - 5em);
-		}
+  height: 60em;
+  margin-bottom: calc(-5% - 1em);
+  @include lg {
+    margin-bottom: -7em;
+  }
+	@include xs {
+    margin-bottom: -8em;
 	}
-	.heroImage {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		width: 100vw;
-		height: calc(100% + 6em); 
-		object-fit: cover;
-		object-position: bottom;
-	}
-	.heroTagline {
-		position: relative;
-		margin: 10em 15em;
-		.title {
-			font-weight: normal;
-		}
-		.subtitle {
-			font-weight: normal;
-			color: var(--color-p);
-		}
-		.button {
-			margin: 1em 0;
-		}
-		@include responsive-page-padding(0);
-	}
+  .heroImageXLContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100% + 6em);
+    background-color: var(--color-bgl);
+    object-position: top;
+    .heroImageXL {
+      width: 40em;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 5em);
+    }
+  }
+  .heroImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: calc(100% + 6em);
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .heroTagline {
+    position: relative;
+    .title {
+      font-weight: normal;
+    }
+    .subtitle {
+      font-weight: normal;
+      color: var(--color-p);
+    }
+    .button {
+      margin: 1em 0;
+    }
+    @include responsive-page-padding(0);
+  }
 }
 .containerDenturesAndImplants {
   background-image: url("/png/denture-and-implant-background.png");
@@ -112,32 +57,48 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  @include responsive-page-padding(0);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 3em;
-    width: clamp($breakpoint-sm, 100%, $breakpoint-xl);
-    height: 100%;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 2em;
     .dentures,
     .implants {
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
+    .dentures {
+      padding-bottom: 2em;
+      .images {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .implants {
+      .images {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
     .images {
-      display: flex;
-      align-items: flex-end;
-      flex-wrap: wrap;
+      width: fit-content;
+      display: grid;
+      align-items: end;
       .label {
+        margin: 0;
+        white-space: nowrap;
         color: var(--color-grey);
         font-size: 24px;
       }
-      .implants,
+      .implant,
       .denture {
         cursor: pointer;
         transition: all 0.5s ease-in-out;
@@ -153,6 +114,7 @@
       }
     }
     .title {
+      margin: 0 0 1em 0;
       font-weight: 400;
       margin: 1em 0;
     }
@@ -161,6 +123,50 @@
     }
     .fontLight {
       color: var(--color-light);
+    }
+  }
+
+  @include responsive-page-padding(0);
+  @include sm {
+    .content {
+      .dentures {
+        padding-bottom: 8em;
+      }
+      .dentures,
+      .implants {
+        .title {
+          margin: 0;
+        }
+        .images {
+          grid-column-gap: 1em;
+          transform: scale(0.7);
+        }
+      }
+    }
+  }
+  @include xs {
+    height: 1400px;
+    .content {
+      padding-bottom: 0;
+      .dentures {
+        padding-bottom: 0;
+      }
+      .dentures,
+      .implants {
+        height: fit-content;
+        .title {
+          white-space: nowrap;
+          margin: 0;
+        }
+        .images {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 1em;
+          .implant,
+          .denture {
+            width: fit-content;
+          }
+        }
+      }
     }
   }
 }
@@ -193,14 +199,14 @@
     .title {
       font-weight: normal;
       color: black;
-			.bold {
-				font-weight: bold; 
-			}
+      .bold {
+        font-weight: bold;
+      }
     }
 
     .healthFundLogos {
       display: flex;
-			flex-wrap: wrap; 
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       width: 100%;
@@ -211,12 +217,27 @@
         object-fit: scale-down;
       }
     }
+    @include sm {
+      .title {
+        padding-bottom: 1em;
+      }
+      padding-bottom: 2em;
+    }
   }
   .superannuation {
-    height: 20em;
+    height: fit-content;
     width: 100%;
     background-color: var(--color-grey);
-    padding: 6em 0 6em 25em;
+    padding: 6em 1em 6em 25em;
+    @include sm {
+      padding: 2em 1em 2em 20em;
+      .description {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+    }
     .title {
       .light {
         font-weight: 300;
@@ -227,67 +248,81 @@
       font-size: 24px;
     }
     .link {
+      cursor: pointer;
       color: var(--color-sd);
       font-weight: bold;
+    }
+    @include xs {
+      padding: 2em 2em 2em 15em;
+      text-align: right;
     }
   }
 }
 
 .containerReviewsWrapper {
   position: relative;
-  height: 150%;
-	width: 100%; 
-	background-image: url('/png/background-2.png');
-	background-repeat: no-repeat;
-	background-size: 100%; 
+  width: 100%;
+  height: fit-content;
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    max-height: 25em;
+  }
   .reviews {
-		height: 100%;
-		width: 100%; 
+    height: 100%;
+    width: 100%;
     display: flex;
-		flex-direction: column;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-		padding-top: 5em; 
+    padding-top: 5em;
     .title {
       font-weight: normal;
       color: var(--color-light);
     }
 
-		.containerCard {
-			width: 100%; 
-			display: flex;
-			padding-top: 2em; 
-			justify-content: space-around;
+    .containerCard {
+      width: 100%;
+      display: flex;
+      padding-top: 2em;
+      justify-content: space-around;
 
-			.card {
-				width: 30%; 
-				border-radius: 10px;
-				background-color: var(--color-light); 
-				padding: 2em;
-				box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-				display: flex;
-				flex-direction: column; 
-				justify-content: space-between;
-				.textReviewer,
-				.textReview {
-					@include p;
-				}
-				.textReview {
-					margin: 0 0 1em 0; 
-				}
-				.textReviewer {
-					margin: 0; 
-					width: 100%; 
-					display: flex;
-					justify-content: flex-end;
-				}
-			}
-			@include md {
-				flex-direction: column;
-				.card {
-					width: calc(100% - 4em)
-				}
-			}
-		}
-	}
+      .card {
+        width: 30%;
+        border-radius: 10px;
+        background-color: var(--color-light);
+        padding: 2em;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .textReviewer,
+        .textReview {
+          @include p;
+        }
+        .textReview {
+          margin: 0 0 1em 0;
+        }
+        .textReviewer {
+          margin: 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+    @include md {
+      height: fit-content;
+      .containerCard {
+        flex-direction: column;
+        align-items: center;
+        .card {
+          margin: 1em 0;
+          width: calc(100% - 4em);
+        }
+      }
+    }
+  }
 }

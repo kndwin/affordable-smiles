@@ -66,7 +66,7 @@ const DenturesAndImplants = () => {
               },
             ].map(({ src, label, href }) => (
               <Link href={href} key={src}>
-                <div className={styles.denture}>
+                <div className={styles.implant}>
                   <img src={src} alt={label} />
                   <p className={styles.label}>{label}</p>
                 </div>

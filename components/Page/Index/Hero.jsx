@@ -1,9 +1,17 @@
 import { Button, Carousel } from "components";
 import { useBreakpoints } from "hooks";
-import styles from "./styles.module.scss"
+import { useEffect, useState } from "react";
+import styles from "./styles.module.scss";
 
 const Hero = () => {
   const { md } = useBreakpoints();
+  const [mounted, setMounted] = useState();
+  useEffect(() => {
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
+  }, []);
 
   const Slide1 = () => (
     <div>
@@ -36,12 +44,14 @@ const Hero = () => {
 
   return (
     <div className={styles.containerHero}>
-      <Carousel>
-        <Slide1 />
-        <Slide1 />
-      </Carousel>
+      {mounted && (
+        <Carousel>
+          <Slide1 />
+          <Slide1 />
+        </Carousel>
+      )}
     </div>
   );
 };
 
-export default Hero
+export default Hero;

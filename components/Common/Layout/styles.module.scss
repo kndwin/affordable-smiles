@@ -9,11 +9,11 @@
   flex-direction: column;
   overflow: hidden;
   .header {
-		z-index: 100; 
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-		@include responsive-page-padding(0);
+    @include responsive-page-padding(0);
     .logo {
       color: var(--color-p1);
       width: fit-content;
@@ -29,13 +29,13 @@
       display: flex;
       align-items: center;
       .dropdownService {
-				color: var(--color-sd);
-				display: flex;
-				align-items: center;
-				.reversedTriangle {
-					width: 0;
-					height: 0;
-					margin: 0 0 0 .5em; 
+        color: var(--color-sd);
+        display: flex;
+        align-items: center;
+        .reversedTriangle {
+          width: 0;
+          height: 0;
+          margin: 0 0 0 0.5em;
           border-left: 5px solid transparent;
           border-right: 5px solid transparent;
           border-top: 8px solid var(--color-sd);
@@ -75,9 +75,9 @@
       }
     }
   }
-	.header.homePageHeader {
-		margin-bottom: -9em; 
-	}
+  .header.homePageHeader {
+    margin-bottom: -9em;
+  }
   .main {
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@
   }
   .footer {
     padding: 4em 9em;
-		@include responsive-page-padding(4em);
+    @include responsive-page-padding(4em);
     .footerContent {
       display: flex;
       flex-direction: column;
@@ -114,6 +114,20 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+        @include sm {
+          .footerLinks {
+            width: 100%;
+          }
+          .smallLogoWrapper {
+            width: 0;
+          }
+        }
+        @include xxs {
+          .footerLinks {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
     }

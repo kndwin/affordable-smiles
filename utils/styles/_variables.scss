@@ -1,4 +1,6 @@
 // Breakpoints
+
+$breakpoint-xxs: 500px;
 $breakpoint-xs: 720px;
 $breakpoint-sm: 960px;
 $breakpoint-md: 1280px;
@@ -7,55 +9,61 @@ $breakpoint-xl: 1660px;
 
 // Responsive paddings
 @mixin responsive-page-padding($paddingY) {
-	padding: $paddingY 9em;
+  padding: $paddingY 9em;
 
-	@media(max-width: $breakpoint-xl) {
-		padding: $paddingY 9em;
-	}
-	@media(max-width: $breakpoint-lg) {
-		padding: $paddingY 7em;
-	}
-	@media(max-width: $breakpoint-md) {
-		padding: $paddingY 5em;
-	}
-	@media(max-width: $breakpoint-sm) {
-		padding: $paddingY 3em;
-	}
+  @media (max-width: $breakpoint-xl) {
+    padding: $paddingY 9em;
+  }
+  @media (max-width: $breakpoint-lg) {
+    padding: $paddingY 7em;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: $paddingY 5em;
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: $paddingY 3em;
+  }
 }
 
 // Responsive width
+@mixin xxs {
+  @media (max-width: #{$breakpoint-xxs}) {
+    @content;
+  }
+}
+
 @mixin xs {
-   @media (max-width: #{$breakpoint-xs}) {
-       @content;
-   }
+  @media (max-width: #{$breakpoint-xs}) {
+    @content;
+  }
 }
 
 @mixin sm {
-   @media (max-width: #{$breakpoint-sm}) {
-       @content;
-   }
+  @media (max-width: #{$breakpoint-sm}) {
+    @content;
+  }
 }
 
 @mixin md {
-   @media (max-width: #{$breakpoint-md}) {
-       @content;
-   }
+  @media (max-width: #{$breakpoint-md}) {
+    @content;
+  }
 }
 
 @mixin lg {
-   @media (max-width: #{$breakpoint-lg}) {
-       @content;
-   }
+  @media (max-width: #{$breakpoint-lg}) {
+    @content;
+  }
 }
 
 @mixin xl {
-   @media (max-width: #{$breakpoint-xl}) {
-       @content;
-   }
+  @media (max-width: #{$breakpoint-xl}) {
+    @content;
+  }
 }
 
 // Typography
 @mixin p {
-	font-family: Causten; 
-	font-size: 24px; 
+  font-family: Causten;
+  font-size: 24px;
 }

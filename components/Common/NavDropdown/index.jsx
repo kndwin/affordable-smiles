@@ -15,9 +15,15 @@ export const NavDropdown = ({ options, trigger, ...props }) => {
         {options.map(({ title, href, label }) => (
           <div key={`${title}${href}`}>
             {!!title ? (
-              <p className={styles.title}>
-                {title}
-              </p>
+              <>
+                {!!href ? (
+                  <DropdownMenu.Item className={`${styles.titleLink}`}>
+                    <Link href={href}>{title}</Link>
+                  </DropdownMenu.Item>
+                ) : (
+                  <p className={styles.title}>{title}</p>
+                )}
+              </>
             ) : (
               <DropdownMenu.Item
                 className={`${styles.item} ${

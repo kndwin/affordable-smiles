@@ -1,43 +1,44 @@
-import { AspectRatio } from "components";
 import styles from "./styles.module.scss";
 
-const BACKGROUND_WIDTH = 1280;
-const BACKGROUND_HEIGHT = 345;
-const BACKGROUND_WIDTH_TO_HEIGHT_RATIO = BACKGROUND_WIDTH / BACKGROUND_HEIGHT;
-
 const Reviews = () => {
+  const reviews = [
+    {
+      review:
+        "“Advanced techniques with modern equipment & a friendly,experienced team. Love their work!”",
+      reviewer: "Sharon",
+    },
+    {
+      review:
+        "“Nice. Dentist was very good. Explained each step before doing things. Works around Peoples Disabilities.”",
+      reviewer: "Glenda",
+    },
+    {
+      review:
+        "My experience was one of up most professional, friendly and quality service.",
+      reviewer: "David",
+    },
+  ];
   return (
-    <AspectRatio.Root
-      ratio={BACKGROUND_WIDTH_TO_HEIGHT_RATIO}
-      className={styles.containerReviewsWrapper}
-    >
+    <div className={styles.containerReviewsWrapper}>
+      <img
+        className={styles.backgroundImage}
+        src="/png/background-2.png"
+        alt="Background Image"
+      />
       <div className={styles.reviews}>
         <h3 className={styles.title}>What our customers say about us</h3>
         <div className={styles.containerCard}>
-          <div className={styles.card}>
-            <p className={styles.textReview}>
-              “Advanced techniques with modern equipment & a friendly,
-              experienced team. Love their work!”
-            </p>
-            <p className={styles.textReviewer}>- Sharon</p>
-          </div>
-          <div className={styles.card}>
-            <p className={styles.textReviewer}>
-              “Nice. Dentist was very good. Explained each step before doing
-              things. Works around Peoples Disabilities.”
-            </p>
-            <p className={styles.textReviewer}>- Glenda</p>
-          </div>
-          <div className={styles.card}>
-            <p className={styles.textReview}>
-              My experience was one of up most professional, friendly and
-              quality service.
-            </p>
-            <p className={styles.textReviewer}>- David</p>
-          </div>
+          {reviews.map(({ review, reviewer }) => (
+            <div className={styles.card}>
+              <p className={styles.textReview}>{review}</p>
+              <p className={styles.textReviewer}>
+                <span>- {reviewer}</span>
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-    </AspectRatio.Root>
+    </div>
   );
 };
 
