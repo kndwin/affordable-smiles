@@ -28,8 +28,8 @@ const Reviews = () => {
       <div className={styles.reviews}>
         <h3 className={styles.title}>What our customers say about us</h3>
         <div className={styles.containerCard}>
-          {reviews.map(({ review, reviewer }) => (
-            <div className={styles.card}>
+          {reviews.map(({ review, reviewer }, index) => (
+            <div key={index} className={styles.card}>
               <p className={styles.textReview}>{review}</p>
               <p className={styles.textReviewer}>
                 <span>- {reviewer}</span>
