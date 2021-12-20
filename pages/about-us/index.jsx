@@ -24,11 +24,6 @@ const AboutUsPage = () => {
             smile and eat to your best!
           </p>
         </div>
-        <img
-          className={styles.heroImage}
-          src="/png/about-us.png"
-          alt="Woman smiling"
-        />
         <p>Clinical Director,</p>
         <img src="/svg/signature.svg" alt="signature" />
       </div>

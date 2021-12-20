@@ -48,6 +48,7 @@ const Hero = () => {
         <Carousel>
           <Slide1 />
           <Slide1 />
+          <Slide1 />
         </Carousel>
       )}
     </div>

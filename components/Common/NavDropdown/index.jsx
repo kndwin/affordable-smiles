@@ -17,21 +17,25 @@ export const NavDropdown = ({ options, trigger, ...props }) => {
             {!!title ? (
               <>
                 {!!href ? (
-                  <DropdownMenu.Item className={`${styles.titleLink}`}>
-                    <Link href={href}>{title}</Link>
-                  </DropdownMenu.Item>
+                  <Link href={href}>
+                    <DropdownMenu.Item className={`${styles.titleLink}`}>
+                      {title}
+                    </DropdownMenu.Item>
+                  </Link>
                 ) : (
                   <p className={styles.title}>{title}</p>
                 )}
               </>
             ) : (
-              <DropdownMenu.Item
-                className={`${styles.item} ${
-                  optionsHasTitles ? styles.indent : ""
-                }`}
-              >
-                <Link href={href}>{label}</Link>
-              </DropdownMenu.Item>
+              <Link href={href}>
+                <DropdownMenu.Item
+                  className={`${styles.item} ${
+                    optionsHasTitles ? styles.indent : ""
+                  }`}
+                >
+                  {label}
+                </DropdownMenu.Item>
+              </Link>
             )}
           </div>
         ))}
