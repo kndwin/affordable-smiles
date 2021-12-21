@@ -14,7 +14,7 @@ const Hero = () => {
   }, []);
 
   const Slide1 = () => (
-    <div>
+    <div className={styles.slide1}>
       {md ? (
         <img
           className={styles.heroImage}
@@ -42,12 +42,23 @@ const Hero = () => {
     </div>
   );
 
+	const Slide2 = () => (
+		<div className={styles.slide2}>
+			<div className={styles.containerImage}>
+				<img src="/png/man-with-denture.png" alt="Man with Denture" />
+			</div>
+			<div className={styles.containerImage}>
+				<img src="/png/woman-with-denture.png" alt="Man with Denture" />
+			</div>
+		</div>
+	)
+
   return (
     <div className={styles.containerHero}>
       {mounted && (
         <Carousel>
           <Slide1 />
-          <Slide1 />
+          <Slide2 />
           <Slide1 />
         </Carousel>
       )}

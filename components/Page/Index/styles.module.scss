@@ -1,53 +1,74 @@
 @import "utils/styles/variables";
 
 .containerHero {
-  height: 60em;
-  margin-bottom: calc(-5% - 1em);
+  height: 50em;
+  margin-bottom: -7em;
   @include lg {
     margin-bottom: -7em;
   }
-	@include xs {
+  @include xs {
     margin-bottom: -8em;
-	}
-  .heroImageXLContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100vw;
-    height: calc(100% + 6em);
-    background-color: var(--color-bgl);
-    object-position: top;
-    .heroImageXL {
-      width: 40em;
+  }
+  .slide1 {
+		height: 100%; 
+		display: flex;
+    .heroImageXLContainer {
       position: absolute;
-      bottom: 0;
-      left: calc(50% - 5em);
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 100%;
+      background-color: var(--color-bgl);
+      object-position: top;
+      .heroImageXL {
+        width: 40em;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 5em);
+      }
+    }
+    .heroImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: calc(100% + 6em);
+      object-fit: cover;
+      object-position: bottom;
+    }
+    .heroTagline {
+			margin: auto; 
+			width: 80em; 
+      position: relative;
+      .title {
+        font-weight: normal;
+      }
+      .subtitle {
+        font-weight: normal;
+        color: var(--color-p);
+      }
+      .button {
+        margin: 1em 0;
+      }
+      @include responsive-page-padding(0);
     }
   }
-  .heroImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100vw;
-    height: calc(100% + 6em);
-    object-fit: cover;
-    object-position: bottom;
-  }
-  .heroTagline {
-    position: relative;
-    .title {
-      font-weight: normal;
+  .slide2 {
+    display: flex;
+    height: calc(100% - 6em);
+		margin-top: 6em; 
+
+    .containerImage {
+      height: 100%;
+      width: calc(50%);
+      img {
+				object-fit: cover;
+				width: 100%;
+        height: 100%;
+      }
     }
-    .subtitle {
-      font-weight: normal;
-      color: var(--color-p);
-    }
-    .button {
-      margin: 1em 0;
-    }
-    @include responsive-page-padding(0);
   }
 }
 .containerDenturesAndImplants {
@@ -65,10 +86,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
-    height: fit-content;
-    padding-bottom: 2em;
+    height: 100%;
     .dentures,
     .implants {
       width: 100%;
@@ -79,6 +99,7 @@
     }
     .dentures {
       padding-bottom: 2em;
+      margin-bottom: 2em;
       .images {
         grid-template-columns: repeat(4, 1fr);
       }
@@ -114,9 +135,8 @@
       }
     }
     .title {
-      margin: 0 0 1em 0;
+      margin: 0;
       font-weight: 400;
-      margin: 1em 0;
     }
     .fontFade {
       color: var(--color-pm);
@@ -130,7 +150,8 @@
   @include sm {
     .content {
       .dentures {
-        padding-bottom: 8em;
+        margin-top: 4em;
+        padding-bottom: 2em;
       }
       .dentures,
       .implants {
@@ -149,7 +170,7 @@
     .content {
       padding-bottom: 0;
       .dentures {
-        padding-bottom: 0;
+        padding: 0;
       }
       .dentures,
       .implants {

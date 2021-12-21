@@ -1,14 +1,13 @@
 import { useBreakpoints } from "hooks";
 import styles from "./styles.module.scss";
-import { DentureBorderSulcusLine } from "./SVGs";
 import PlusDot from "public/svg/plus-circle.svg";
 import { useState } from "react";
 
-const ChromeDentureFocused = (props) => {
+const CosmeticDentureFocused = (props) => {
   const { md } = useBreakpoints();
 	return (
     <div className={styles.containerChromeDenture}>
-      <h1 className={styles.title}>Cosmetic dentures</h1>
+      <h1 className={styles.title}>Chrome dentures</h1>
       <div className={styles.containerImage}>
         <img
           className={styles.image}
@@ -23,7 +22,7 @@ const ChromeDentureFocused = (props) => {
 	)
 }
 
-export default ChromeDentureFocused
+export default CosmeticDentureFocused
 
 const DesktopVersion = () => {
   const [showDescription, setShowDescription] = useState({

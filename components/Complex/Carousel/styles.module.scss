@@ -30,6 +30,8 @@
   }
 
   .dots {
+		position: absolute;
+		bottom: 5;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -57,15 +59,14 @@
     display: flex;
     transition: all 0.5s ease;
     position: absolute;
-    height: calc(100% - 5em);
+    height: calc(100%);
 
     .slideWrapper {
       height: calc(100%);
       transition: all 0.5s ease;
       display: flex;
       .slide {
-        margin: auto;
-        height: fit-content;
+        height: 100%;
         width: 100%;
       }
     }
