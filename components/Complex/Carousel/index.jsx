@@ -7,7 +7,6 @@ export const Carousel = (props) => {
   const { children, initSlide = 0, small = true, thumbnails } = props;
   const maxItem = React.Children.count(children);
   const [slide, setSlide] = useState(initSlide ?? 0);
-  const [isMouseDown, setIsMouseDown] = useState(false);
 
   const wrapperRef = useRef(null);
 
