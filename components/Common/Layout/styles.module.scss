@@ -60,7 +60,7 @@
         }
       }
     }
-    @media (max-width: $breakpoint-lg) {
+    @include lg {
       justify-content: space-between;
       align-items: center;
       .logo {
@@ -83,7 +83,6 @@
     flex-direction: column;
     width: 100%;
     flex: 1;
-    padding: 3em 0;
     box-sizing: border-box;
   }
   .footer {

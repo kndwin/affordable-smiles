@@ -218,6 +218,8 @@
     align-items: center;
     justify-content: center;
     .title {
+			text-align: center; 
+			margin: .5em 0; 
       font-weight: normal;
       color: black;
       .bold {
@@ -231,6 +233,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+			margin: .5em 0; 
       .healthFundLogo {
         margin: 1em;
         max-width: 15em;
@@ -240,7 +243,7 @@
     }
     @include sm {
       .title {
-        padding-bottom: 1em;
+				margin-bottom: 1em;
       }
       padding-bottom: 2em;
     }
@@ -248,15 +251,19 @@
   .superannuation {
     height: fit-content;
     width: 100%;
-    background-color: var(--color-grey);
-    padding: 6em 1em 6em 25em;
-    @include sm {
-      padding: 2em 1em 2em 20em;
+		background-color: var(--color-grey);
+		padding: 3em 1em 2em 25em;
+		@include sm {
+			padding: 2em 1em 2em 20em;
+			.title {
+				margin-bottom: 1em;
+			}
       .description {
         font-size: 18px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+				margin: 0 ;
       }
     }
     .title {
@@ -346,4 +353,9 @@
       }
     }
   }
+	@include sm {
+		.reviews {
+			padding-top: 2em;
+		}
+	}
 }
