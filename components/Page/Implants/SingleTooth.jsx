@@ -11,8 +11,8 @@ const	SingleToothFocused = (props) => {
       <div className={styles.containerImage}>
         <img
           className={styles.image}
-          src="/png/implants.png"
-          alt="Acrylic Denture Image"
+          src="/png/single-tooth-implant-high-res.png"
+          alt="Single Tooth Implant"
         />
 				{/*
         {!md && <DesktopVersion />}

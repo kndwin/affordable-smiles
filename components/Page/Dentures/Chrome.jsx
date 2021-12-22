@@ -8,11 +8,11 @@ const ChromeDentureFocused = (props) => {
   const { md } = useBreakpoints();
 	return (
     <div className={styles.containerChromeDenture}>
-      <h1 className={styles.title}>Cosmetic dentures</h1>
+      <h1 className={styles.title}>Chrome dentures</h1>
       <div className={styles.containerImage}>
         <img
           className={styles.image}
-          src="/png/chrome-denture.png"
+          src="/png/chrome-denture-high-res.png"
           alt="Chrome Denture Image"
         />
 				{/*

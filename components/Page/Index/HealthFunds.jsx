@@ -1,13 +1,18 @@
+import { useBreakpoints } from "hooks";
 import styles from "./styles.module.scss";
 
 const HealthFunds = () => {
+  const { sm } = useBreakpoints();
+
   return (
     <div className={styles.containerHealthFunds}>
-      <img
-        className={styles.smilingWoman}
-        src="/png/woman-smiling.png"
-        alt="Smiling"
-      />
+      {!sm && (
+        <img
+          className={styles.smilingWoman}
+          src="/png/woman-smiling.png"
+          alt="Smiling"
+        />
+      )}
       <div className={styles.logos}>
         <h3 className={styles.title}>
           We welcome
@@ -33,16 +38,18 @@ const HealthFunds = () => {
         </div>
       </div>
       <div className={styles.superannuation}>
-        <h3 className={styles.title}>
-          <span className={styles.light}>Pay for your dental care with </span>
-          Superannuation!
-        </h3>
-        <p className={styles.description}>
-          Do you need help to cover the cost of your dental needs?
-          You can access your super early for a wide range of surgical dental
-          procedures
-          <span className={styles.link}> Read More ▸</span>
-        </p>
+        <div className={styles.content}>
+          <h3 className={styles.title}>
+            <span className={styles.light}>Pay for your dental care with </span>
+            Superannuation!
+          </h3>
+          <p className={styles.description}>
+            Do you need help to cover the cost of your dental needs? You can
+            access your super early for a wide range of surgical dental
+            procedures
+            <span className={styles.link}> Read More ▸</span>
+          </p>
+        </div>
       </div>
     </div>
   );

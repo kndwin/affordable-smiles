@@ -12,10 +12,12 @@ const FullDentureFocused = (props) => {
       <div className={styles.containerImage}>
         <img
           className={styles.image}
-          src="/png/full-denture.png"
+          src="/png/full-denture-high-res.png"
           alt="Full Denture Image"
         />
+				{/*
         {!md && <DesktopVersion />}
+				*/}
       </div>
     </div>
   );

@@ -1,17 +1,10 @@
 import { Button, Carousel } from "components";
 import { useBreakpoints } from "hooks";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const Hero = () => {
   const { md } = useBreakpoints();
-  const [mounted, setMounted] = useState();
-  useEffect(() => {
-    setMounted(true);
-    return () => {
-      setMounted(false);
-    };
-  }, []);
 
   const Slide1 = () => (
     <div className={styles.slide1}>
@@ -37,31 +30,31 @@ const Hero = () => {
           Fair prices.
         </h1>
         <h3 className={styles.subtitle}>No compromise on quality.</h3>
-        <Button className={styles.button}>YOUR SMILE POSSIBLITIES</Button>
+        <Link href="#dentureAndImplants">
+          <Button className={styles.button}>YOUR SMILE POSSIBLITIES</Button>
+        </Link>
       </div>
     </div>
   );
 
-	const Slide2 = () => (
-		<div className={styles.slide2}>
-			<div className={styles.containerImage}>
-				<img src="/png/man-with-denture.png" alt="Man with Denture" />
-			</div>
-			<div className={styles.containerImage}>
-				<img src="/png/woman-with-denture.png" alt="Man with Denture" />
-			</div>
-		</div>
-	)
+  const Slide2 = () => (
+    <div className={styles.slide2}>
+      <div className={styles.containerImage}>
+        <img src="/png/man-with-denture.png" alt="Man with Denture" />
+      </div>
+      <div className={styles.containerImage}>
+        <img src="/png/woman-with-denture.png" alt="Man with Denture" />
+      </div>
+    </div>
+  );
 
   return (
     <div className={styles.containerHero}>
-      {mounted && (
         <Carousel>
           <Slide1 />
           <Slide2 />
           <Slide1 />
         </Carousel>
-      )}
     </div>
   );
 };

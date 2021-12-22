@@ -11,8 +11,8 @@ const	FullArchFocused = (props) => {
       <div className={styles.containerImage}>
         <img
           className={styles.image}
-          src="/png/full-arch-implant-bridge.png"
-          alt="Acrylic Denture Image"
+          src="/png/full-arch-implant-bridge-high-res.png"
+          alt="Full Arch Implant Bridge"
         />
 				{/*
         {!md && <DesktopVersion />}

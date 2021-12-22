@@ -1,5 +1,5 @@
 import { Layout } from "components";
-import ChromeDentureFocused from "components/Page/Dentures/Chrome";
+import CosmeticDentureFocused from "components/Page/Dentures/Cosmetic";
 import ReactMarkdown from "react-markdown";
 import sharedStyles from "utils/styles/shared.module.scss";
 
@@ -42,7 +42,7 @@ At Affordable Smile, we can perform the complete denture process, from taking bi
     <Layout>
       <div className={sharedStyles.article}>
         <div className={sharedStyles.hero}>
-          <ChromeDentureFocused />
+          <CosmeticDentureFocused />
         </div>
         <div className={sharedStyles.markdown}>
 					<ReactMarkdown>

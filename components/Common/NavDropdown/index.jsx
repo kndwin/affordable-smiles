@@ -11,7 +11,7 @@ export const NavDropdown = ({ options, trigger, ...props }) => {
         {trigger}
       </DropdownMenu.Trigger>
 
-      <DropdownMenu.Content className={styles.dropdownBox}>
+      <DropdownMenu.Content sideOffset={20} className={styles.dropdownBox}>
         {options.map(({ title, href, label }) => (
           <div key={`${title}${href}`}>
             {!!title ? (

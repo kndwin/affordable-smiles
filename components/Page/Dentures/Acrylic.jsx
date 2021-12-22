@@ -12,7 +12,7 @@ const AcrylicDentureFocused = (props) => {
       <div className={styles.containerImage}>
         <img
           className={styles.image}
-          src="/png/acrylic-denture.png"
+          src="/png/acrylic-denture-high-res.png"
           alt="Acrylic Denture Image"
         />
 				{/*

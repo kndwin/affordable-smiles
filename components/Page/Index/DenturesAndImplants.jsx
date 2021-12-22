@@ -3,7 +3,11 @@ import styles from "./styles.module.scss";
 
 const DenturesAndImplants = () => {
   return (
-    <div className={`${styles.containerDenturesAndImplants}`}>
+    <section
+      tabIndex="-1"
+      id="dentureAndImplants"
+      className={`${styles.containerDenturesAndImplants}`}
+    >
       <div className={styles.content}>
         <div className={styles.dentures}>
           <h2 className={styles.title}>
@@ -75,7 +79,7 @@ const DenturesAndImplants = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

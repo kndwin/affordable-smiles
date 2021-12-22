@@ -1,3 +1,4 @@
+.containerPartialDenture,
 .containerChromeDenture,
 .containerAcrylicDenture,
 .containerFullDenture {
@@ -53,4 +54,18 @@
       }
     }
   }
+}
+
+.containerPartialDenture {
+	.containerImage {
+		display: flex;
+		max-width: 80em;
+		padding: 0 2em; 
+		justify-content: space-around;
+		align-items: flex-end;
+		.image {
+			width: 30%; 
+			object-fit: contain; 
+		}
+	}
 }

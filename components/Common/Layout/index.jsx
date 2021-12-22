@@ -7,7 +7,7 @@ import { useBreakpoints } from "hooks";
 import { NavLink, NavDropdown } from "components";
 
 export const Layout = ({ children, isHomePage = false }) => {
-  const { xl, sm } = useBreakpoints();
+  const { lg, sm } = useBreakpoints();
   return (
     <div className={styles.container}>
       <header
@@ -15,8 +15,10 @@ export const Layout = ({ children, isHomePage = false }) => {
           isHomePage ? styles.homePageHeader : ""
         }`}
       >
-        <Logo className={styles.logo} />
-        {xl ? (
+        <Link href="/">
+          <Logo style={{ cursor: "pointer" }} className={styles.logo} />
+        </Link>
+        {lg ? (
           <NavDropdown
             className={styles.dropdown}
             trigger={<GiHamburgerMenu className={styles.hamburger} />}
@@ -36,12 +38,12 @@ export const Layout = ({ children, isHomePage = false }) => {
                 label: "Full arch Implant Bridge",
               },
               { title: "About us", href: "/about-us" },
-              { title: "In the media", href: "/in-the-media" },
+              // { title: "In the media", href: "/in-the-media" },
               { title: "Contact & Location", href: "/contact" },
             ]}
           />
         ) : (
-          <>
+          <div className={styles.containerLinks}>
             <div className={styles.links}>
               <NavLink path="/" label="Home" />
               <NavDropdown
@@ -69,20 +71,24 @@ export const Layout = ({ children, isHomePage = false }) => {
                 ]}
               />
               <NavLink path="/about-us" label="About us" />
-              <NavLink path="/in-the-media" label="In the media" />
+							{/*
+								<NavLink path="/in-the-media" label="In the media" />
+							*/}
               <NavLink path="/contact" label="Contact & Location" />
             </div>
-            <div className={styles.buttonWrapper}>
-              <div className={styles.iconWithLabel}>
-                <img
-                  className={styles.icon}
-                  src="/svg/calendar.svg"
-                  alt="Calendar icon"
-                />
-                <a className={styles.label}>Book an appointment</a>
+            <Link href='/contact'>
+              <div className={styles.buttonWrapper}>
+                <div className={styles.iconWithLabel}>
+                  <img
+                    className={styles.icon}
+                    src="/svg/call.svg"
+                    alt="Calendar icon"
+                  />
+                  <a className={styles.label}>Call to book an appointment</a>
+                </div>
               </div>
-            </div>
-          </>
+            </Link>
+          </div>
         )}
       </header>
       <main className={styles.main}>{children}</main>
