@@ -46,7 +46,8 @@ const HealthFunds = () => {
           <p className={styles.description}>
             Do you need help to cover the cost of your dental needs? You can
             access your super early for a wide range of surgical dental
-            procedures
+            procedures.
+						<br />
             <span className={styles.link}> Read More ▸</span>
           </p>
         </div>

@@ -1,10 +1,9 @@
 import { IdProvider } from "@radix-ui/react-id";
-import "utils//styles/global.scss";
-
+import "utils/styles/global.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <IdProvider>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </IdProvider>
   );
 }

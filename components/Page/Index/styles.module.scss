@@ -2,11 +2,10 @@
 
 .containerHero {
   height: 58em;
-  margin-bottom: -7em;
-  @include lg {
+  @include xl {
     margin-bottom: -7em;
   }
-  @include xs {
+  @include sm {
     margin-bottom: -8em;
   }
   .slide1 {
@@ -57,24 +56,47 @@
   }
   .slide2 {
     display: flex;
-    height: calc(100% - 150px);
-    margin-top: 150px;
-
-    .containerImage {
-      height: 100%;
-      width: calc(50%);
+    height: calc(100% - 200px);
+    margin-top: 200px;
+    flex-direction: column;
+    .images {
+      display: flex;
+      height: calc(100% - 15em);
+      width: 100%;
       img {
-        object-fit: cover;
-        width: 100%;
+        width: 50%;
         height: 100%;
+        object-position: top;
+        object-fit: cover;
+      }
+    }
+    .title {
+      margin: 2em auto;
+      font-weight: 400;
+      .bold {
+        font-weight: 600;
+      }
+    }
+    @include xs {
+      .title {
+				margin: 0 auto; 
+        padding: 0 2em;
+      }
+      .images {
+        padding: 0 2em;
+        flex-direction: column;
+        img {
+          height: calc(50% - 2em);
+          width: 100%;
+        }
       }
     }
   }
 }
 .containerDenturesAndImplants {
-  background-image: url("/png/denture-and-implant-background.png");
-  height: 1050px;
-  z-index: 10;
+  background-image: url("/png/denture-and-implant-background-flat.png");
+  height: 1000px;
+  z-index: 1;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -83,7 +105,6 @@
   justify-content: flex-end;
   align-items: center;
   .content {
-    padding-top: 5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -150,46 +171,44 @@
 
   @include responsive-page-padding(0);
   @include sm {
+    height: 1400px;
     .content {
+      padding-bottom: 0;
       .dentures {
         margin-top: 4em;
         padding-bottom: 2em;
       }
       .dentures,
       .implants {
-        .title {
-          margin: 0;
-        }
-        .images {
-          grid-column-gap: 1em;
-          transform: scale(0.7);
-        }
-      }
-    }
-  }
-  @include xs {
-    height: 1400px;
-    .content {
-      padding-bottom: 0;
-      .dentures {
-        padding: 0;
-      }
-      .dentures,
-      .implants {
         height: fit-content;
         .title {
           white-space: nowrap;
-          margin: 0;
+          margin: 0 0 1em 0;
         }
         .images {
           grid-template-columns: 1fr 1fr;
           grid-gap: 1em;
+          grid-column-gap: 0;
           .implant,
           .denture {
             width: fit-content;
+            transform: scale(0.8);
           }
         }
       }
+    }
+  }
+  @include md {
+    .content {
+      .images {
+        grid-column-gap: 1em;
+      }
+    }
+  }
+  @include xl {
+    background-image: url("/png/denture-and-implant-background.png");
+    .content {
+      padding-top: 5em;
     }
   }
 }
@@ -236,39 +255,44 @@
       align-items: center;
       justify-content: center;
       width: calc(100% - 200px);
-      margin: 0.5em 0 .5em 200px;
+      margin: 0.5em 0 0.5em 200px;
       .healthFundLogo {
         margin: 1em;
         max-width: 15em;
         max-height: 4em;
-				object-fit: scale-down;
-				overflow-x: auto;
-				@include lg {
-					height: 3em;
-				}
-				@include sm {
-					height: 2em;
-				}
-			}
-		}
+        object-fit: scale-down;
+        overflow-x: auto;
+        @include lg {
+          height: 3em;
+        }
+        @include sm {
+          height: 2em;
+        }
+      }
+    }
     @include sm {
       margin: 0.5em 0;
+      padding-bottom: 2em;
       .title {
         margin-bottom: 1em;
       }
-      padding-bottom: 2em;
+      .healthFundLogos {
+        margin: 0.5em 0;
+        width: 100%;
+      }
     }
   }
   .superannuation {
     height: fit-content;
     width: 100%;
     background-color: var(--color-grey);
-    padding: 3em 1em 2em 25em;
+    padding: 3em 1em 2em 5em;
     .content {
-			width: 100%;
-			max-width: 80ch;
-			margin: 0 auto;
+      width: 100%;
+      max-width: 81ch;
+      margin: 0 auto;
       .title {
+        margin-bottom: 1em;
         .light {
           font-weight: 300;
         }
@@ -282,8 +306,11 @@
         }
       }
     }
+    @include md {
+      text-align: right;
+    }
     @include sm {
-      padding: 3em 1em;
+      padding: 3em 2em;
       .title {
         margin-bottom: 1em;
         text-align: center;
@@ -330,7 +357,7 @@
       justify-content: center;
 
       .card {
-				margin: 0 1em; 
+        margin: 0 1em;
         width: 100%;
         max-width: 45ch;
         border-radius: 10px;

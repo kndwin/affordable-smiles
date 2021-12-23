@@ -17,45 +17,46 @@
   }
 
   .header {
-    z-index: 100;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include responsive-page-padding(3em);
+    padding: 3em 3em;
     .logo {
       color: var(--color-p1);
       width: 350px;
-      margin: 1.5em 1em 2em 0;
+      margin: auto 0;
     }
     .hamburger {
       fill: var(--color-sd);
       height: 3em;
       width: 3em;
-		}
-		.containerLinks {
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			.links {
-				margin-right: 2em;
-				display: flex;
-				align-items: center;
-				.dropdownService {
-					color: var(--color-sd);
-					display: flex;
-					align-items: center;
-					.reversedTriangle {
-						width: 0;
-						height: 0;
-						margin: 0 0 0 0.5em;
-						border-left: 5px solid transparent;
-						border-right: 5px solid transparent;
-						border-top: 8px solid var(--color-sd);
-					}
-				}
-			}
-		}
-    
+    }
+    .containerLinks {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .links {
+        margin-right: 2em;
+        display: flex;
+        align-items: center;
+        .dropdownService {
+          color: var(--color-sd);
+          display: flex;
+          align-items: center;
+          font-size: 20px;
+          .reversedTriangle {
+            width: 0;
+            height: 0;
+            margin: 0 0 0 0.5em;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid var(--color-sd);
+          }
+        }
+      }
+    }
+
     .buttonWrapper {
       margin-bottom: 0.5em;
       display: flex;
@@ -64,28 +65,25 @@
         display: flex;
         align-items: center;
         margin-right: 2em;
-				cursor: pointer; 
+        cursor: pointer;
         .icon {
           height: 1em;
           width: 1em;
-					margin-right: .5em; 
+          margin-right: 0.5em;
         }
         .label {
           color: var(--color-sd);
           font-size: 1.5em;
           font-weight: 400;
-					&:hover {
-						color: var(--color-pm);
-					}
+          &:hover {
+            color: var(--color-pm);
+          }
         }
       }
     }
     @include lg {
       justify-content: space-between;
       align-items: center;
-      .logo {
-        margin: 2em 0;
-      }
       .buttonWrapper,
       .links {
         display: none;
@@ -150,5 +148,54 @@
         }
       }
     }
+  }
+}
+
+.callToBook {
+  height: 100%;
+  width: 100%;
+  padding: 4em;
+	border-radius: 8px; 
+  background: linear-gradient(269.56deg, #026e7a 27.44%, #2399a0 83.4%);
+	color: var(--color-light);
+  .locations {
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr;
+    grid-gap: 2em;
+    margin-top: 2em;
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      .location {
+        font-size: 48px;
+				white-space: normal; 
+      }
+      .address, .number {
+        font-size: 24px;
+      }
+    }
+  }
+  .title {
+    color: var(--color-light);
+  }
+  .containerLocation {
+		display: flex;
+		flex-direction: column;
+    .location {
+			white-space: nowrap; 
+			font-weight: bold; 
+      font-size: 24px;
+      margin-bottom: 0;
+			line-height: 1em; 
+    }
+		.address, 
+    .number {
+			color: var(--color-light);
+      font-size: 24px;
+      margin: 0;
+    }
+		 .number {
+			 font-weight: bold;
+		 }
   }
 }

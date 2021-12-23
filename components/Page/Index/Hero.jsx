@@ -38,23 +38,23 @@ const Hero = () => {
   );
 
   const Slide2 = () => (
-    <div className={styles.slide2}>
-      <div className={styles.containerImage}>
-        <img src="/png/man-with-denture.png" alt="Man with Denture" />
-      </div>
-      <div className={styles.containerImage}>
-        <img src="/png/woman-with-denture.png" alt="Man with Denture" />
-      </div>
-    </div>
+		<div className={styles.slide2}>
+			<div className={styles.images}>
+				<img src="/png/man-with-denture.png" alt="Man with Denture" />
+				<img src="/png/woman-with-denture.png" alt="Man with Denture" />
+			</div>
+			<h3 className={styles.title}>No more messy impressions, 
+				<b className={styles.bold}> we are a 100% digital practice</b>
+			</h3>
+		</div>
   );
 
   return (
     <div className={styles.containerHero}>
-        <Carousel>
-          <Slide1 />
-          <Slide2 />
-          <Slide1 />
-        </Carousel>
+      <Carousel>
+        <Slide1 />
+        <Slide2 />
+      </Carousel>
     </div>
   );
 };

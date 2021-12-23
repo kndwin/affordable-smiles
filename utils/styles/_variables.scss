@@ -1,3 +1,4 @@
+@use "sass:math";
 // Breakpoints
 
 $breakpoint-xxs: 500px;
@@ -16,12 +17,6 @@ $breakpoint-xl: 1660px;
   }
   @media (max-width: $breakpoint-lg) {
     padding: $paddingY 3em;
-  }
-  @media (max-width: $breakpoint-md) {
-    padding: $paddingY 2em;
-  }
-  @media (max-width: $breakpoint-sm) {
-    padding: $paddingY 1em;
   }
 }
 
@@ -64,64 +59,63 @@ $breakpoint-xl: 1660px;
 
 // Typography
 @mixin h1 {
-	font-family: Causten;
-	font-size: 72px;
-	@include lg {
-		font-size: 64px;
-	}
-	@include sm {
-		font-size: 40px;
-	}
+  font-family: Causten;
+  font-size: 72px;
+  @include lg {
+    font-size: 64px;
+  }
+  @include sm {
+    font-size: 40px;
+  }
 }
 
 @mixin h2 {
-	font-family: Causten;
-	font-size: 64px;
-	@include lg {
-		font-size: 48px;
-	}
-	@include sm {
-		font-size: 32px;
-	}
+  font-family: Causten;
+  font-size: 64px;
+  @include lg {
+    font-size: 48px;
+  }
+  @include sm {
+    font-size: 42px;
+  }
 }
 
 @mixin h3 {
-	font-family: Causten;
-	font-size: 48px;
-	@include lg {
-		font-size: 36px;
-	}
-	@include sm {
-		font-size: 24px;
-	}
+  font-family: Causten;
+  font-size: 48px;
+  @include lg {
+    font-size: 36px;
+  }
+  @include sm {
+    font-size: 24px;
+  }
 }
 
 @mixin sh {
-	font-family: Causten;
-	font-size: 36px;
-	@include lg {
-		font-size: 24px;
-	}
-	@include sm {
-		font-size: 18px;
-	}
+  font-family: Causten;
+  font-size: 36px;
+  @include lg {
+    font-size: 24px;
+  }
+  @include sm {
+    font-size: 18px;
+  }
 }
 
 @mixin p {
-	font-family: Causten;
-	font-size: 24px;
-	@include lg {
-		font-size: 18px;
-	}
-	@include sm {
-		font-size: 16px;
-	}
+  font-family: Causten;
+  font-size: 20px;
+  @include lg {
+    font-size: 18px;
+  }
+  @include sm {
+    font-size: 16px;
+  }
 }
 
 // Fluid Typography
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-	
+  @return math.div($value, ($value * 0 + 1));
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
@@ -134,7 +128,10 @@ $breakpoint-xl: 1660px;
     & {
       font-size: $min-font-size;
       @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
       }
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;

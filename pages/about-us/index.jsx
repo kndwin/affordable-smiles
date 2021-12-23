@@ -25,7 +25,7 @@ const AboutUsPage = () => {
           </p>
         </div>
         <p>Clinical Director,</p>
-        <img src="/svg/signature.svg" alt="signature" />
+				<img style={{ marginTop: "2em"}} src="/svg/signature.svg" alt="signature" />
       </div>
     </Layout>
   );

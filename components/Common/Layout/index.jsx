@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "./styles.module.scss";
 import Logo from "../../../public/svg/logo.svg";
 import { useBreakpoints } from "hooks";
-import { NavLink, NavDropdown } from "components";
+import { NavLink, NavDropdown, Dialog } from "components";
 
 export const Layout = ({ children, isHomePage = false }) => {
   const { lg, sm } = useBreakpoints();
@@ -23,6 +23,19 @@ export const Layout = ({ children, isHomePage = false }) => {
             className={styles.dropdown}
             trigger={<GiHamburgerMenu className={styles.hamburger} />}
             options={[
+              {
+                dialog: <CallToBookDialog />,
+                label: (
+                  <p>
+                    <img
+                      style={{ marginRight: "10px" }}
+                      src="svg/call.svg"
+                      alt="Call icon"
+                    />
+                    Call Now
+                  </p>
+                ),
+              },
               { title: "Home", href: "/" },
               { title: "Dentures" },
               { href: "/dentures/full", label: "Full Dentures" },
@@ -71,23 +84,27 @@ export const Layout = ({ children, isHomePage = false }) => {
                 ]}
               />
               <NavLink path="/about-us" label="About us" />
-							{/*
+              {/*
 								<NavLink path="/in-the-media" label="In the media" />
 							*/}
               <NavLink path="/contact" label="Contact & Location" />
             </div>
-            <Link href='/contact'>
-              <div className={styles.buttonWrapper}>
-                <div className={styles.iconWithLabel}>
-                  <img
-                    className={styles.icon}
-                    src="/svg/call.svg"
-                    alt="Calendar icon"
-                  />
-                  <a className={styles.label}>Call to book an appointment</a>
-                </div>
-              </div>
-            </Link>
+            <div className={styles.buttonWrapper}>
+              <Dialog
+                trigger={
+                  <div className={styles.iconWithLabel}>
+                    <img
+                      className={styles.icon}
+                      src="/svg/call.svg"
+                      alt="Calendar icon"
+                    />
+                    <a className={styles.label}>Call to book an appointment</a>
+                  </div>
+                }
+              >
+                <CallToBookDialog />
+              </Dialog>
+            </div>
           </div>
         )}
       </header>
@@ -108,9 +125,11 @@ export const Layout = ({ children, isHomePage = false }) => {
               <Link href="/implants/single-tooth">
                 <a className={styles.footerLink}>Single Tooth Implants</a>
               </Link>
+              {/*
               <Link href="/in-the-media">
                 <a className={styles.footerLink}>In the Media</a>
               </Link>
+							*/}
               <Link href="/dentures/partial">
                 <a className={styles.footerLink}>Partial Denture</a>
               </Link>
@@ -134,6 +153,40 @@ export const Layout = ({ children, isHomePage = false }) => {
           </div>
         </div>
       </footer>
+    </div>
+  );
+};
+
+const CallToBookDialog = () => {
+  return (
+    <div className={styles.callToBook}>
+      <h1 className={styles.title}>Choose your location</h1>
+      <div className={styles.locations}>
+        <div className={styles.containerLocation}>
+          <p className={styles.location}>NSW - Charlestown 2290</p>
+          <p className={styles.address}>7b/23 Mitchell Drive</p>
+          <a className={styles.number} href="tel:1300715578">
+            <img style={{ marginRight: "10px" }} src="/svg/call-white.svg" />
+            1300 71 55 78
+          </a>
+        </div>
+        <div className={styles.containerLocation}>
+          <p className={styles.location}>NSW - East Maitland 2323</p>
+          <p className={styles.address}>7b/23 Mitchell Drive</p>
+          <a className={styles.number} href="tel:1300715578">
+            <img style={{ marginRight: "10px" }} src="/svg/call-white.svg" />
+            1300 71 55 78
+          </a>
+        </div>
+        <div className={styles.containerLocation}>
+          <p className={styles.location}>ACT - Phillip 2606</p>
+          <p className={styles.address}>65 Colbee Ct</p>
+          <a className={styles.number} href="tel:61908828">
+            <img style={{ marginRight: "10px" }} src="/svg/call-white.svg" />
+            6190 8828
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

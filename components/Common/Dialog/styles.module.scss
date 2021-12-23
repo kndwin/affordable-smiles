@@ -1,0 +1,26 @@
+@import "utils/styles/variables";
+
+.overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999; 
+}
+
+.trigger {
+	border: none; 
+	width: 100%; 
+	padding: 0; 
+	background-color: transparent; 
+}
+
+.content {
+	z-index: 2147483648; 
+	background-color: transparent; 
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: fit-content;
+	height: fit-content;
+}

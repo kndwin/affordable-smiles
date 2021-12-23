@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@radix-ui/react-aspect-ratio": "^0.1.2",
+    "@radix-ui/react-dialog": "^0.1.5",
     "@radix-ui/react-dropdown-menu": "^0.1.1",
     "@radix-ui/react-id": "^0.1.1",
     "@radix-ui/react-popover": "^0.1.1",
@@ -26,7 +27,8 @@
     "react-virtualized": "^9.22.3",
     "sass": "^1.43.4",
     "three": "^0.134.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "zustand": "^3.6.7"
   },
   "devDependencies": {
     "eslint": "7",

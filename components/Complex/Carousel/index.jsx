@@ -27,7 +27,7 @@ export const Carousel = (props) => {
             {children.length > 0 &&
               children?.map((props, i) => (
                 <div
-                  key={() => v4()}
+                  key={i}
                   style={{ width }}
                   className={`${styles.slideWrapper}`}
                 >
