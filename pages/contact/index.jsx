@@ -1,17 +1,16 @@
 import { Layout } from "components";
-import Map from "components/Page/Contact/Map";
 import styles from "./styles.module.scss";
 
-const ContactPage = (props) => {
-  const googleMapsApiKey = process.env.GOOGLE_MAP_EMBED_API_KEY;
-  const coordinates = {
-		charlesTown: "-32.982652884245226,151.6917723563484",
-		eastMaitland: "-32.76140784811062,151.5887235121665",
-		phillipTown: "-35.35244097297118,149.08858204289103",
-	}
-	const ZOOM = 18
-	const MAP_STYLE = "roadmap"
+const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAP_EMBED_API_KEY;
+const coordinates = {
+	charlesTown: "-32.982652884245226,151.6917723563484",
+	eastMaitland: "-32.76140784811062,151.5887235121665",
+	phillipTown: "-35.35244097297118,149.08858204289103",
+}
+const ZOOM = 18
+const MAP_STYLE = "roadmap"
 
+const ContactPage = (props) => {
   return (
     <Layout>
       <div className={styles.pageContainer}>
