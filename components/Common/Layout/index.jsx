@@ -164,7 +164,7 @@ const CallToBookDialog = () => {
       <div className={styles.locations}>
         <div className={styles.containerLocation}>
           <p className={styles.location}>NSW - Charlestown 2290</p>
-          <p className={styles.address}>7b/23 Mitchell Drive</p>
+          <p className={styles.address}>6/158 Pacific Highway</p>
           <a className={styles.number} href="tel:1300715578">
             <img style={{ marginRight: "10px" }} src="/svg/call-white.svg" />
             1300 71 55 78
