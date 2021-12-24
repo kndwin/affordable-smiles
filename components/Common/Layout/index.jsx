@@ -7,7 +7,7 @@ import { useBreakpoints } from "hooks";
 import { NavLink, NavDropdown, Dialog } from "components";
 
 export const Layout = ({ children, isHomePage = false }) => {
-  const { lg, sm } = useBreakpoints();
+  const { lg, sm, xxs } = useBreakpoints();
   return (
     <div className={styles.container}>
       <header
@@ -16,7 +16,11 @@ export const Layout = ({ children, isHomePage = false }) => {
         }`}
       >
         <Link href="/">
-          <Logo style={{ cursor: "pointer" }} className={styles.logo} />
+          {xxs ? (
+            <img style={{ cursor: "pointer" }} src="/png/logo.png" alt="Logo" />
+          ) : (
+            <Logo style={{ cursor: "pointer" }} className={styles.logo} />
+          )}
         </Link>
         {lg ? (
           <NavDropdown

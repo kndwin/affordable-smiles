@@ -21,7 +21,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3em 3em;
+    padding: 5em 5em;
+
+    @include xl {
+      padding: 4em 4em;
+    }
+    @include lg {
+      padding: 3em 3em;
+    }
+    @include sm {
+      padding: 2em 2em;
+    }
+    @include xxs {
+      padding: 1em 1em;
+    }
     .logo {
       color: var(--color-p1);
       width: 350px;
@@ -155,9 +168,12 @@
   height: 100%;
   width: 100%;
   padding: 4em;
-	border-radius: 8px; 
+  border-radius: 8px;
   background: linear-gradient(269.56deg, #026e7a 27.44%, #2399a0 83.4%);
-	color: var(--color-light);
+  color: var(--color-light);
+  @include xxs {
+    padding: 2em;
+  }
   .locations {
     display: grid;
     grid: 1fr 1fr / 1fr 1fr;
@@ -168,34 +184,44 @@
       flex-direction: column;
       .location {
         font-size: 48px;
-				white-space: normal; 
+        white-space: normal;
       }
-      .address, .number {
+      .address,
+      .number {
         font-size: 24px;
       }
     }
   }
   .title {
     color: var(--color-light);
+    @include xxs {
+      font-size: 32px;
+    }
   }
   .containerLocation {
-		display: flex;
-		flex-direction: column;
+    display: flex;
+    flex-direction: column;
     .location {
-			white-space: nowrap; 
-			font-weight: bold; 
+      white-space: nowrap;
+      font-weight: bold;
       font-size: 24px;
+      @include xxs {
+        font-size: 20px;
+      }
       margin-bottom: 0;
-			line-height: 1em; 
+      line-height: 1em;
     }
-		.address, 
+    .address,
     .number {
-			color: var(--color-light);
+      color: var(--color-light);
       font-size: 24px;
       margin: 0;
+      @include xxs {
+        font-size: 16px;
+      }
     }
-		 .number {
-			 font-weight: bold;
-		 }
+    .number {
+      font-weight: bold;
+    }
   }
 }
