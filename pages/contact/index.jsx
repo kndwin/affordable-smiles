@@ -46,7 +46,7 @@ const ContactPage = (props) => {
             <div className={styles.state}>
               <h2 className={styles.h2}>ACT</h2>
               <div className={styles.mapWithText}>
-                <h3 className={styles.title}>Phillip Town</h3>
+                <h3 className={styles.title}>Phillip</h3>
                 <p className={styles.location}>
                   65 Colbee Ct, Phillip ACT 2606
                 </p>
