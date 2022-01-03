@@ -19,7 +19,7 @@ const ContactPage = (props) => {
         <div className={styles.mapContainer}>
           <div className={styles.maps}>
             <div className={styles.mapWithText}>
-              <h3 className={styles.title}>Charles Town</h3>
+              <h3 className={styles.title}>CharlesTown</h3>
               <iframe
 								allowFullScreen
                 width="100%"
@@ -43,7 +43,7 @@ const ContactPage = (props) => {
 							<p className={styles.location}>7b/23 Mitchell Drive, East Maitland NSW 2323</p>
             </div>
             <div className={styles.mapWithText}>
-              <h3 className={styles.title}>Charles Town</h3>
+              <h3 className={styles.title}>Phillip Town</h3>
               <iframe
 								allowFullScreen
                 width="100%"
