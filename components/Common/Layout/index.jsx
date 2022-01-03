@@ -134,14 +134,14 @@ export const Layout = ({ children, isHomePage = false }) => {
                 <a className={styles.footerLink}>In the Media</a>
               </Link>
 							*/}
+              <Link href="/contact">
+                <a className={styles.footerLink}>Contact & Location</a>
+              </Link>
               <Link href="/dentures/partial">
                 <a className={styles.footerLink}>Partial Denture</a>
               </Link>
               <Link href="/implant/denture">
                 <a className={styles.footerLink}>Implant Denture</a>
-              </Link>
-              <Link href="/contact">
-                <a className={styles.footerLink}>Contact & Location</a>
               </Link>
               <Link href="/implants/full-arch-bridge">
                 <a style={{ gridColumnStart: 3 }} className={styles.footerLink}>
