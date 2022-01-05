@@ -8,3 +8,4 @@ export { Dialog } from './Common/Dialog'
 
 // Complex
 export { Carousel } from './Complex/Carousel'
+export { Markdown } from './Complex/Markdown'

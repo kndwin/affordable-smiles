@@ -10,12 +10,17 @@
 	.markdown {
 		@include responsive-page-padding(5em);
 		font-family: Causten; 
-		p, li {
+		a, p, li {
 			font-size: 20px; 
 			font-family: Causten; 
+			margin-bottom: 1em;
+		}
+		h1,h2 {
+			margin-bottom: .5em;
 		}
 		h3 {
 			margin-top: 1em; 
+			margin-bottom: .5em; 
 			font-weight: 400; 
 			color: var(--color-pd);
 		}

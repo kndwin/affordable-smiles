@@ -240,7 +240,7 @@
     object-position: left bottom;
     position: absolute;
     height: 25em;
-    left: 0;
+    left: -2em;
     bottom: 0;
   }
 
@@ -321,6 +321,10 @@
       }
     }
     @include md {
+			.content {
+				margin: 0 0 0 auto; 
+				padding-right: 2em;
+			}
       text-align: right;
     }
     @include sm {
@@ -330,10 +334,7 @@
         text-align: center;
       }
       .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin: 0;
+        text-align: center;
       }
     }
   }

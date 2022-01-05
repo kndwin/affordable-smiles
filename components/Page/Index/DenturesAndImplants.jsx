@@ -55,12 +55,12 @@ const DenturesAndImplants = () => {
             {[
               {
                 src: "/png/full-arch-implant-bridge.png",
-                label: "Full Arch Implant Bridge",
+                label: "All-on-4 / All-on-6",
                 href: "/implants/full-arch-bridge",
               },
               {
                 src: "/png/implants.png",
-                label: "Implants",
+                label: "Single Implants",
                 href: "/implants/single-tooth",
               },
               {

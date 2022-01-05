@@ -1,6 +1,6 @@
 import { Layout } from "components";
 import FullDentureFocused from "components/Page/Dentures/Full";
-import ReactMarkdown from "react-markdown";
+import {Markdown } from 'components';
 import sharedStyles from "utils/styles/shared.module.scss";
 
 const FullDenturePage = (props) => {
@@ -26,9 +26,9 @@ When patients are in a hurry or don’t want to be without dentures, we can also
 
 The purpose of dentures is to replace broken or missing teeth. During your initial visit to our clinic, we can make a thorough examination and discuss your situation. We will provide you with more information regarding your oral health and advise you on which type of denture is right for you. 
 
-At Affordable Smile, we keep up with the latest procedures and methods on the market to ensure 100% satisfaction. Our dentists use top-of-the-line equipment to inspect, diagnose, and treat various dental issues and get the best possible results so you can eat and smile with confidence. 
+At Affordable Smile, we keep up with the latest procedures and methods on the market to ensure 100% satisfaction. Our practitoners use top-of-the-line equipment to inspect, diagnose, and treat various dental issues and get the best possible results so you can eat and smile with confidence. 
 
-Contact us today at 1300-715-578, and we will be happy to schedule a consultation to discuss full dentures.`;
+[Contact us today](/contact) and we will be happy to schedule a consultation to discuss full dentures.`;
 
   return (
     <Layout>
@@ -37,9 +37,9 @@ Contact us today at 1300-715-578, and we will be happy to schedule a consultatio
           <FullDentureFocused />
         </div>
         <div className={sharedStyles.markdown}>
-					<ReactMarkdown>
+					<Markdown>
 						{markdown}
-					</ReactMarkdown>
+					</Markdown>
         </div>
       </div>
     </Layout>

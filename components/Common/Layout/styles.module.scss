@@ -80,13 +80,13 @@
         margin-right: 2em;
         cursor: pointer;
         .icon {
-          height: 1em;
-          width: 1em;
-          margin-right: 0.5em;
+          height: 2em;
+          width: 2em;
+          margin-right: 1em;
         }
         .label {
           color: var(--color-sd);
-          font-size: 1.5em;
+          font-size: 2.5em;
           font-weight: 400;
           &:hover {
             color: var(--color-pm);

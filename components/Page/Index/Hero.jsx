@@ -36,7 +36,7 @@ const Hero = () => {
       )}
       <div className={styles.heroTagline}>
         <h1 className={styles.title}>
-          Affordable Smiles.
+          Affordable Smiles
           <br />
           Fair prices.
         </h1>

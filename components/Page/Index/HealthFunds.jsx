@@ -1,4 +1,5 @@
 import { useBreakpoints } from "hooks";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const HealthFunds = () => {
@@ -46,9 +47,12 @@ const HealthFunds = () => {
           <p className={styles.description}>
             Do you need help to cover the cost of your dental needs? You can
             access your super early for a wide range of surgical dental
-            procedures.
-						<br />
-            <span className={styles.link}> Read More ▸</span>
+            procedures. Please
+            <Link href="/contact">
+              <span className={styles.link}> contact us </span>
+            </Link>
+            to find out more information on how you can access your super to
+            receive life changing treatments.
           </p>
         </div>
       </div>

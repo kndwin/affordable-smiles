@@ -6,8 +6,8 @@ import { useState } from "react";
 const CosmeticDentureFocused = (props) => {
   const { md } = useBreakpoints();
 	return (
-    <div className={styles.containerChromeDenture}>
-      <h1 className={styles.title}>Chrome dentures</h1>
+    <div className={styles.containerCosmeticDenture}>
+			<h1 className={styles.title}>Cosmetic dentures</h1>
       <div className={styles.containerImage}>
         <img
           className={styles.image}

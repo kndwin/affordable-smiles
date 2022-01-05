@@ -24,8 +24,8 @@ const AboutUsPage = () => {
             smile and eat to your best!
           </p>
         </div>
-        <p>Clinical Director,</p>
 				<img style={{ marginTop: "2em"}} src="/svg/signature.svg" alt="signature" />
+        <p style={{ marginTop: "2em"}}>Clinical Director</p>
       </div>
     </Layout>
   );

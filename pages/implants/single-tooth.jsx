@@ -12,7 +12,7 @@ At Affordable Smile, we want the best for our patients. Although some people are
 
 ### Dental Implants vs Bridges for Replacing a Missing Tooth
 
-Traditional bridges are prosthetics that rely on the remaining healthy teeth. The artificial tooth fills the gap between the teeth and restores patients’ smiles. It is an affordable and fast treatment. 
+Traditional bridges are prosthetics that rely on the remaining healthy teeth. The artificial tooth fills the gap between the teeth and restores patients’ smiles. “Whilst a bridge is certainly an option, it does ultimately mean cutting into potentially healthy teeth and starting the degradation process which may lead to future tooth problems on the bridged teeth. If your bone is good and you have a level of general health an implant may be the way to go! So what is an implant?
 
 A single tooth implant is a small titanium piece that replaces the lost tooth’s root. After our dentists place the implant, your jaw will start bonding with the implant, and during that time, you will wear a temporary crown. Once the single implant and the jaw bone bond is strong, you will enjoy a permanent crown, which can last for decades.
 
@@ -29,7 +29,7 @@ It is essential to schedule dental assistance if:
 - You are missing a tooth due to a medical condition
 - You had a tooth knocked out in an accident
  
-Contact us today at 1300-715-578 to book an appointment and discuss a single tooth implant treatment`;
+[Contact us today](/contact) to book an appointment and discuss a single tooth implant treatment`;
 
   return (
     <Layout>

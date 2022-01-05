@@ -7,7 +7,7 @@ const	FullArchFocused = (props) => {
   const { md } = useBreakpoints();
 	return (
     <div className={styles.containerFullArchDenture}>
-      <h1 className={styles.title}>Full Arch Bridge Dentures</h1>
+      <h1 className={styles.title}>All-on-4/6 Dental Implants</h1>
       <div className={styles.containerImage}>
         <img
           className={styles.image}
