@@ -1,6 +1,4 @@
-const withTM = require('next-transpile-modules')(['three'])
-
-module.exports = withTM({
+module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -9,4 +7,4 @@ module.exports = withTM({
 
     return config;
   }
-})
+}
