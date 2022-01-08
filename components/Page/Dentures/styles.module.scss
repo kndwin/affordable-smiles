@@ -26,8 +26,10 @@
       position: absolute;
       height: 1em;
       width: 1em;
-      border-radius: 50%;
-      background-color: var(--color-pm);
+			.flexEnd {
+				justify-content: flex-end;
+				
+			}
       .containerTitle {
 				display: flex;
 				.plusIcon {
