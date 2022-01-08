@@ -8,56 +8,64 @@
   @include sm {
     margin-bottom: -8em;
   }
-	@include xxs {
-		height: 50em;
-		margin-bottom: -13em;
-	}
-	.slide1 {
-		height: 100%;
-		display: flex;
-		.heroImageXLContainer {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			width: 100vw;
-			height: 100%;
-			background-color: var(--color-light);
-			object-position: top;
-			.heroImageXL {
-				width: 40em;
-				position: absolute;
-				bottom: 0;
-				left: calc(50% - 5em);
-			}
-		}
-		.heroImage {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			width: 100vw;
-			height: calc(100% + 6em);
-			object-fit: cover;
-			object-position: bottom;
-		}
-		.heroTagline {
-			margin: auto;
-			width: 80em;
-			position: relative;
-			.title {
-				font-weight: normal;
-			}
-			.subtitle {
-				font-weight: normal;
-				color: var(--color-p);
-			}
-			.button {
-				margin: 1em 0;
-			}
-			@include responsive-page-padding(0);
-		}
-	}
+  @include xxs {
+    height: 50em;
+    margin-bottom: -13em;
+  }
+  .slide1 {
+    height: 100%;
+    display: flex;
+		position: relative;
+    .heroImageXLContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 100%;
+      background-color: var(--color-light);
+      object-position: top;
+      .heroImageXL {
+        width: 40em;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 5em);
+      }
+    }
+    .heroImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: calc(100% + 6em);
+      object-fit: cover;
+      object-position: bottom;
+    }
+      .bookNow {
+        position: absolute;
+        bottom: 100px;
+				left: 50%;
+				z-index: 100; 
+      }
+    .heroTagline {
+      margin: auto;
+      width: 80em;
+      position: relative;
+      .title {
+        font-weight: normal;
+      }
+      .subtitle {
+        font-weight: normal;
+        color: var(--color-p);
+      }
+      .button {
+        margin: 1em 0;
+      }
+
+      @include responsive-page-padding(0);
+    }
+  }
   .slide2 {
     display: flex;
     height: calc(100% - 200px);
@@ -83,7 +91,7 @@
     }
     @include xs {
       .title {
-				margin: 0 auto; 
+        margin: 0 auto;
         padding: 0 2em;
       }
       .images {
@@ -215,16 +223,17 @@
       }
     }
   }
-	@include xxs {
-		height: 2200px; 
-		.dentures, .implants {
-			.images {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
-		}
-	}
+  @include xxs {
+    height: 2200px;
+    .dentures,
+    .implants {
+      .images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 }
 
 .containerHealthFunds {
@@ -321,10 +330,10 @@
       }
     }
     @include md {
-			.content {
-				margin: 0 0 0 auto; 
-				padding-right: 2em;
-			}
+      .content {
+        margin: 0 0 0 auto;
+        padding-right: 2em;
+      }
       text-align: right;
     }
     @include sm {
@@ -412,12 +421,12 @@
     }
   }
   @include sm {
-		.backgroundImage {
-			height: 200px;
-			max-height: 200px;
-		}
-		.reviews {
-			padding-top: 3em;
-		}
-	}
+    .backgroundImage {
+      height: 200px;
+      max-height: 200px;
+    }
+    .reviews {
+      padding-top: 3em;
+    }
+  }
 }

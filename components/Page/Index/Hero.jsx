@@ -1,19 +1,20 @@
-import { Button, Carousel } from "components";
+import { Button, Carousel, Dialog } from "components";
+import { CallToBookDialog } from "components/Common/Layout";
 import { useBreakpoints } from "hooks";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
 const Hero = () => {
-  const { md } = useBreakpoints();
+  const { md, sm } = useBreakpoints();
 
-	const [mounted, setMounted] = useState()
+  const [mounted, setMounted] = useState();
 
   useEffect(() => {
-		setMounted(true)
-		return () => {
-			setMounted(false)
-		}
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
   }, [md]);
 
   const Slide1 = () => (
@@ -25,7 +26,7 @@ const Hero = () => {
           alt="Woman smiling"
         />
       )}
-			{mounted && !md && (
+      {mounted && !md && (
         <div className={styles.heroImageXLContainer}>
           <img
             className={styles.heroImageXL}
@@ -45,6 +46,17 @@ const Hero = () => {
           <Button className={styles.button}>YOUR SMILE POSSIBLITIES</Button>
         </Link>
       </div>
+      {mounted && sm && (
+        <Dialog
+          trigger={
+            <Button className={`${styles.button} ${styles.bookNow}`}>
+              BOOK NOW
+            </Button>
+          }
+        >
+          <CallToBookDialog />
+        </Dialog>
+      )}
     </div>
   );
 

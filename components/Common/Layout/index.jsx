@@ -161,7 +161,7 @@ export const Layout = ({ children, isHomePage = false }) => {
   );
 };
 
-const CallToBookDialog = () => {
+export const CallToBookDialog = () => {
   return (
     <div className={styles.callToBook}>
       <h1 className={styles.title}>Choose your location</h1>
