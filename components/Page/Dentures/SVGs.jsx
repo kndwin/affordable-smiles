@@ -1,6 +1,6 @@
-export const DentureBorderSulcusLine = (
+export const TopLeftLine = () => (
   <svg
-    style={{ position: "absolute", left: "-570px", top: "-40px" }}
+    style={{ position: "absolute", right: "0", bottom: "0" }}
     width="581"
     height="55"
     viewBox="0 0 581 55"
@@ -12,13 +12,7 @@ export const DentureBorderSulcusLine = (
       stroke="url(#paint0_linear_228_2279)"
       strokeWidth="2"
     />
-    <ellipse
-      cx="573.223"
-      cy="47.2599"
-      rx="7.20129"
-      ry="7.13052"
-      fill="#46ACB9"
-    />
+    <ellipse cx="573.223" cy="47.2599" rx="7.20129" ry="7.13052" fill="white" />
     <defs>
       <linearGradient
         id="paint0_linear_228_2279"
@@ -28,25 +22,111 @@ export const DentureBorderSulcusLine = (
         y2="47.6882"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#1FB0C1" />
+        <stop stopColor="white" />
         <stop offset="1" stopColor="#48BEB7" />
       </linearGradient>
     </defs>
   </svg>
 );
 
-export const PlusDot = (
+export const BottomLeftLine = () => (
   <svg
-    width="29"
-    height="29"
-    viewBox="0 0 29 29"
+    style={{ position: "absolute", right: "0", top: "0" }}
+    width="575"
+    height="115"
+    viewBox="0 0 575 115"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle opacity="0.3" cx="14.5" cy="14.5" r="14.5" fill="#D5EAED" />
     <path
-      d="M14.5001 5.9707C9.7899 5.9707 5.9707 9.7899 5.9707 14.5001C5.9707 19.2103 9.7899 23.0295 14.5001 23.0295C19.2103 23.0295 23.0295 19.2103 23.0295 14.5001C23.0295 9.7899 19.2103 5.9707 14.5001 5.9707ZM18.1556 14.957C18.1556 15.0408 18.087 15.1094 18.0033 15.1094H15.1094V18.0033C15.1094 18.087 15.0408 18.1556 14.957 18.1556H14.0432C13.9594 18.1556 13.8909 18.087 13.8909 18.0033V15.1094H10.997C10.9132 15.1094 10.8447 15.0408 10.8447 14.957V14.0432C10.8447 13.9594 10.9132 13.8909 10.997 13.8909H13.8909V10.997C13.8909 10.9132 13.9594 10.8447 14.0432 10.8447H14.957C15.0408 10.8447 15.1094 10.9132 15.1094 10.997V13.8909H18.0033C18.087 13.8909 18.1556 13.9594 18.1556 14.0432V14.957Z"
+      d="M567.712 7.70515L484.193 113.237H0.123047"
+      stroke="url(#paint0_linear_228_2289)"
+      stroke-width="2"
+    />
+    <circle
+      cx="569.138"
+      cy="6.27923"
+      r="5.70441"
+      transform="rotate(-180 569.138 6.27923)"
       fill="white"
     />
+    <defs>
+      <linearGradient
+        id="paint0_linear_228_2289"
+        x1="412.222"
+        y1="77.5278"
+        x2="92.7639"
+        y2="64.4481"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset="1" stop-color="#48BEB7" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const TopRightLine = () => (
+  <svg
+    style={{ position: "absolute", left: "0", bottom: "0" }}
+    width="463"
+    height="55"
+    viewBox="0 0 463 55"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.56635 47.191L38.4139 1.55566M38.4139 1.55566H217.204M38.4139 1.55566H455M38.4139 1.55566H462.5"
+      stroke="url(#paint0_linear_228_2282)"
+      strokeWidth="2"
+    />
+    <circle cx="6.14045" cy="48.617" r="5.70441" fill="white" />
+    <defs>
+      <linearGradient
+        id="paint0_linear_228_2282"
+        x1="132.195"
+        y1="16.9974"
+        x2="387.207"
+        y2="36.35"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="#48BEB7" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const BottomRightLine = () => (
+  <svg
+    width="412"
+    height="55"
+    viewBox="0 0 412 55"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.84433 7.82806L67.2311 53.4634H411.432"
+      stroke="url(#paint0_linear_228_2285)"
+      strokeWidth="2"
+    />
+    <circle
+      r="5.70441"
+      transform="matrix(1 0 0 -1 6.41828 6.40179)"
+      fill="white"
+    />
+    <defs>
+      <linearGradient
+        id="paint0_linear_228_2285"
+        x1="118.407"
+        y1="38.0217"
+        x2="344.913"
+        y2="22.7724"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset="1" stopColor="#48BEB7" />
+      </linearGradient>
+    </defs>
   </svg>
 );
