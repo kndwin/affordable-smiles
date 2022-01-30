@@ -36,7 +36,9 @@ const Hero = () => {
       )}
       <div className={styles.heroTagline}>
         <h1 className={styles.title}>
-          Affordable Smiles
+          Affordable Dentures
+					<br />
+					and Implants.
           <br />
           Fair prices.
         </h1>
