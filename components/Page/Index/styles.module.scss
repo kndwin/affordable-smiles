@@ -46,9 +46,15 @@
 			width: 80em;
 			position: relative;
 			.title {
+				font-size: 2.5em; 
+				font-weight: normal;
+			}
+			.title2 {
+				font-size: 2em; 
 				font-weight: normal;
 			}
 			.subtitle {
+				font-size: 1.5em; 
 				font-weight: normal;
 				color: var(--color-p);
 			}

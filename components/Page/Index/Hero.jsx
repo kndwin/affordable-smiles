@@ -7,13 +7,13 @@ import styles from "./styles.module.scss";
 const Hero = () => {
   const { md } = useBreakpoints();
 
-	const [mounted, setMounted] = useState()
+  const [mounted, setMounted] = useState();
 
   useEffect(() => {
-		setMounted(true)
-		return () => {
-			setMounted(false)
-		}
+    setMounted(true);
+    return () => {
+      setMounted(false);
+    };
   }, [md]);
 
   const Slide1 = () => (
@@ -25,7 +25,7 @@ const Hero = () => {
           alt="Woman smiling"
         />
       )}
-			{mounted && !md && (
+      {mounted && !md && (
         <div className={styles.heroImageXLContainer}>
           <img
             className={styles.heroImageXL}
@@ -35,13 +35,8 @@ const Hero = () => {
         </div>
       )}
       <div className={styles.heroTagline}>
-        <h1 className={styles.title}>
-          Affordable Dentures
-					<br />
-					and Implants.
-          <br />
-          Fair prices.
-        </h1>
+        <h1 className={styles.title}>Affordable Dentures & Implants.</h1>
+        <h1 className={styles.title2}>Fair prices.</h1>
         <h3 className={styles.subtitle}>No compromise on quality.</h3>
         <Link href="#dentureAndImplants">
           <Button className={styles.button}>YOUR SMILE POSSIBLITIES</Button>

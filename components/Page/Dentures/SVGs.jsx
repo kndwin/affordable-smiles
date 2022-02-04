@@ -41,7 +41,7 @@ export const BottomLeftLine = () => (
     <path
       d="M567.712 7.70515L484.193 113.237H0.123047"
       stroke="url(#paint0_linear_228_2289)"
-      stroke-width="2"
+      strokeWidth="2"
     />
     <circle
       cx="569.138"
@@ -60,7 +60,7 @@ export const BottomLeftLine = () => (
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="white" />
-        <stop offset="1" stop-color="#48BEB7" />
+        <stop offset="1" stopColor="#48BEB7" />
       </linearGradient>
     </defs>
   </svg>
