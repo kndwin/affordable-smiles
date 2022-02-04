@@ -1,5 +1,30 @@
 @import "utils/styles/variables";
 
 .pageContainer {
-	@include responsive-page-padding(0); 
+  @include responsive-page-padding(0);
+  .posts {
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+  }
+  .post {
+    border: 1px solid #000;
+    padding: 1em;
+  }
+  @include xl {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @include sm {
+    .posts {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.blogContainer {
+  @include responsive-page-padding(0);
 }

@@ -36,11 +36,8 @@ const Hero = () => {
         </div>
       )}
       <div className={styles.heroTagline}>
-        <h1 className={styles.title}>
-          Affordable Smiles
-          <br />
-          Fair prices.
-        </h1>
+        <h1 className={styles.title}>Affordable Dentures & Implants.</h1>
+        <h1 className={styles.title2}>Fair prices.</h1>
         <h3 className={styles.subtitle}>No compromise on quality.</h3>
         <Link href="#dentureAndImplants">
           <Button className={styles.button}>YOUR SMILE POSSIBLITIES</Button>

@@ -8,16 +8,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@notionhq/client": "^0.4.12",
     "@radix-ui/react-aspect-ratio": "^0.1.2",
     "@radix-ui/react-dialog": "^0.1.5",
     "@radix-ui/react-dropdown-menu": "^0.1.1",
     "@radix-ui/react-id": "^0.1.1",
     "@radix-ui/react-popover": "^0.1.1",
-    "@react-google-maps/api": "^2.7.0",
     "@react-three/drei": "^7.20.5",
     "@react-three/fiber": "^7.0.19",
     "@svgr/webpack": "^5.5.0",
-    "gltf-pipeline": "^3.0.4",
     "next": "12.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -26,13 +25,12 @@
     "react-responsive": "^9.0.0-beta.5",
     "react-virtualized": "^9.22.3",
     "sass": "^1.43.4",
-    "three": "^0.134.0",
+    "styled-components": "^5.3.3",
     "uuid": "^8.3.2",
     "zustand": "^3.6.7"
   },
   "devDependencies": {
     "eslint": "7",
-    "eslint-config-next": "12.0.3",
-    "next-transpile-modules": "^9.0.0"
+    "eslint-config-next": "12.0.3"
   }
 }
