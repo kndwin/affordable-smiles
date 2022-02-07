@@ -29,19 +29,19 @@ const DesktopVersion = () => {
     topLeft: {
       title: "Denture Border (Sulcus)",
       description:
-        "The depth of the denture and their border is critical for stability and enabling suction. If you have never worn a denture before this will feel a little bulky at the start but before long you will not notice it. Believe it or not some patients request and extra thick border at the front to remove a wrinkles here and there!",
+        "The depth of the denture and their border is critical for stability and enabling suction. If you have never worn a denture before this will feel a little bulky at the start but before long you will not notice it. Believe it or not, some patients request an extra thick border at the front to remove a wrinkle here and there!",
     },
     bottomLeft: {
-      title: "Front teeth selection",
+      title: "Front Teeth Selection",
       description:
         "Front tooth selection is one of the most important parts of creating your new smile. Every face is shaped differently and as such choosing the right front 6 teeth to match your face is critical. We will look at colour shape and tooth angulation to make it perfect for you!",
     },
 		topRight: {
-			title: "Gum carving",
-			description: "Denture making is still very artistic. Did you know that you denture can be coloured and shaped to mimic very closely the contours of gum? Have a chat to your practitioner if you are interested in having your new denture undergo a full characterisation process."
+			title: "Gum Carving",
+			description: "Denture making is still very artistic. Did you know that your denture can be coloured and shaped to very closely mimic the contours of your gum? Have a chat to your practitioner if you are interested in having your new denture undergo a full characterisation process to product a more life-life denture."
 		},
 		bottomRight: {
-			title: "Hygenic Gum line",
+			title: "Hygenic Gum Line",
 			description: "It is vital that the denture gum line is designed to be as hygienic as possible. A nice even transition line between tooth and denture base will ensure this success."
 		}
   };

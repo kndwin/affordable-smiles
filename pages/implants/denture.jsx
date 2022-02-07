@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import sharedStyles from "utils/styles/shared.module.scss";
 
 const ImplantDenturePage = (props) => {
-  const markdown = `# Full Arch Implant Denture
+  const markdown = `# Implant Denture
 
 A single tooth implant could be the perfect solution to address a missing tooth. When people experience tooth loss, it’s best to review all tooth replacement options, including dental implants, dentures, and bridges. 
 

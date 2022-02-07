@@ -4,7 +4,7 @@ const Reviews = () => {
   const reviews = [
     {
       review:
-        "“Advanced techniques with modern equipment & a friendly,experienced team. Love their work!”",
+        "“Advanced techniques with modern equipment & a friendly, experienced team. Love their work!”",
       reviewer: "Sharon",
     },
     {

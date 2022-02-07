@@ -52,7 +52,7 @@ export const Layout = ({ children, isHomePage = false }) => {
               { href: "/implants/denture", label: "Implant Denture" },
               {
                 href: "/implants/full-arch-bridge",
-                label: "Full arch Implant Bridge",
+                label: "Full Arch Implant Bridge",
               },
               { title: "About us", href: "/about-us" },
               // { title: "In the media", href: "/in-the-media" },

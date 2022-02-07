@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import sharedStyles from "utils/styles/shared.module.scss";
 
 const FullArchBridgePage = (props) => {
-  const markdown = `# All-on-4/6 Dental Implants 
+  const markdown = `# Full Arch Dental Implants 
 
 At Affordable Smile, we want the best for our patients. Although some people aren’t disturbed by the aesthetic issues of missing teeth, such thinking can lead to devastating oral consequences. Patients may face various problems if they don’t address the missing tooth on time, such as gum disease, severe deterioration of the gum tissues, tooth root degradation, and further tooth loss.
 
