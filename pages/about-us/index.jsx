@@ -12,15 +12,13 @@ const AboutUsPage = () => {
           </h3>
           <p>
             We don’t do ‘yucky’ and ‘gooey’ moulds, they are a thing of the
-            past. Every new smile is made using world leading 3D digital
-            technology so that you can have the most precise and beautifully
-            fitting smile.
+            past. Every new smile is made using 3D digital technology.
+            
             <br />
             <br />
-            Whether you want an implant or a denture, you can be sure you will
-            get highest accuracy with our cutting edge 3D technologies. Our
-            world leading digital practitioners and will get you the best
-            possible result to help you smile and eat to your best!
+            Whether you want an implant or a denture, our
+            experienced digital practitioners and will get you the best possible
+            result to help you smile and eat to your best!
           </p>
         </div>
         <img

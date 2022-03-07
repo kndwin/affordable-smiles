@@ -41,8 +41,10 @@ const HealthFunds = () => {
       <div className={styles.superannuation}>
         <div className={styles.content}>
           <h3 className={styles.title}>
-            <span className={styles.light}>Pay for your dental care with </span>
-            Superannuation!
+            <span className={styles.light}>
+              You can access your super early for a wide range of surgical
+              dental procedures
+            </span>
           </h3>
           <p className={styles.description}>
             Do you need help to cover the cost of your dental care? You can

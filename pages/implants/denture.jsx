@@ -8,7 +8,7 @@ const ImplantDenturePage = (props) => {
 
 A single tooth implant could be the perfect solution to address a missing tooth. When people experience tooth loss, it’s best to review all tooth replacement options, including dental implants, dentures, and bridges. 
 
-At Affordable Smile, we want the best for our patients. Although some people aren’t disturbed by the aesthetic issues of missing teeth, such thinking can lead to devastating oral consequences. Patients may face various problems if they don’t address the missing tooth on time, such as gum disease, severe deterioration of the gum tissues, tooth root degradation, and further tooth loss.
+At Affordable Smile, we want the best for our patients. Patients may face various problems if they don’t address the missing tooth on time, such as gum disease, severe deterioration of the gum tissues, tooth root degradation, and further tooth loss.
 
 ### Dental Implants vs Bridges for Replacing a Missing Tooth
 
@@ -23,9 +23,9 @@ A single tooth implant is a small titanium piece that replaces the lost tooth’
 
 ### Who Should Get All-on-4 Fixed Dental Implants?
 
-Anyone who has missing teeth and wants to enjoy a permanent and natural-looking set of teeth will benefit from the full arch implants. These fixed dental implants offer patients a chance to live a healthy and fulfiling lifestyle by replacing teeth with quality implants instead of dentures. 
+These fixed dental implants offer patients a chance to live a healthy and fulfiling lifestyle by replacing teeth with quality implants instead of dentures. 
 
-Patients who are missing multiple teeth or already wear dentures are perfect candidates for a full arch implant. The All-on-4 procedure is more affordable, faster, and doesn’t require high bone density to support the implants. 
+Patients who are missing multiple teeth or already wear dentures are candidates for a full arch implant. The All-on-4 procedure is more affordable, faster, and doesn’t require high bone density to support the implants. 
 
 If you are ready to improve your oral health and enhance your smile, contact us today at 1300-715-578 to schedule an appointment.`;
 

@@ -9,7 +9,7 @@ const PartialDenturePage = (props) => {
 If you are missing one or several teeth, partial dentures are a perfect solution to bring your confidence back and restore your smile.  
 Partial dentures can replace patients’ missing teeth due to age, tooth extraction, or medical conditions. We attach the replacement teeth to a coloured base that matches your gums so that they can look more natural. 
 
-At Affordable Smile, our goal is to deliver compassionate care and exceptional services to all of our patients. We understand the impact that the loss of teeth has on you, so rest assured that you’ll get a custom treatment solution to ensure positive results.
+At Affordable Smile, our goal is to deliver compassionate care and exceptional services to all of our patients. We understand the impact that the loss of teeth has on you, so rest assured that you’ll get a custom treatment solution.
 
 ### The Benefits of Partial Dentures
 

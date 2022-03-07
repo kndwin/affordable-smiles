@@ -3,10 +3,9 @@ import FullArchFocused from "components/Page/Implants/FullArch";
 import ReactMarkdown from "react-markdown";
 import sharedStyles from "utils/styles/shared.module.scss";
 
-const FullArchBridgePage = (props) => {
-  const markdown = `# Full Arch Dental Implants 
+const markdown = `# Full Arch Dental Implants 
 
-At Affordable Smile, we want the best for our patients. Although some people aren’t disturbed by the aesthetic issues of missing teeth, such thinking can lead to devastating oral consequences. Patients may face various problems if they don’t address the missing tooth on time, such as gum disease, severe deterioration of the gum tissues, tooth root degradation, and further tooth loss.
+At Affordable Smile, we want the best for our patients. Patients may face various problems if they don’t address the missing tooth on time, such as gum disease, severe deterioration of the gum tissues, tooth root degradation, and further tooth loss.
 
 
 ### Who Should Get All-on-4 Fixed Dental Implants?
@@ -23,11 +22,12 @@ With an All on 4/6 implant treatment there are various materials that can be use
 
 If you are ready to improve your oral health and enhance your smile, [contact us today](/contact)  to schedule an appointment.`;
 
+const FullArchBridgePage = (props) => {
   return (
     <Layout>
       <div className={sharedStyles.article}>
         <div className={sharedStyles.hero}>
-					<FullArchFocused />
+          <FullArchFocused />
         </div>
         <div className={sharedStyles.markdown}>
           <ReactMarkdown>{markdown}</ReactMarkdown>
@@ -35,6 +35,6 @@ If you are ready to improve your oral health and enhance your smile, [contact us
       </div>
     </Layout>
   );
-}
+};
 
-export default FullArchBridgePage
+export default FullArchBridgePage;

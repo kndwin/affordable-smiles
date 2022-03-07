@@ -73,24 +73,26 @@
     .buttonWrapper {
       margin-bottom: 0.5em;
       display: flex;
+			width: fit-content; 
       align-items: center;
       .iconWithLabel {
+				background-color: var(--color-sd);
         display: flex;
         align-items: center;
-        margin-right: 2em;
+        margin: 0 2em 0 1em;
         cursor: pointer;
+				padding: 0.5em 1em;
+				border-radius: 5px;
         .icon {
           height: 2em;
           width: 2em;
           margin-right: 1em;
         }
         .label {
-          color: var(--color-sd);
-          font-size: 2.5em;
+					white-space: nowrap;
+          color: var(--color-light);
+          font-size: 1.5em;
           font-weight: 400;
-          &:hover {
-            color: var(--color-pm);
-          }
         }
       }
     }
@@ -222,6 +224,24 @@
     }
     .number {
       font-weight: bold;
+    }
+  }
+}
+
+.bookForm {
+  height: 100%;
+  width: 100%;
+  padding: 4em;
+  border-radius: 8px;
+  background: linear-gradient(269.56deg, #026e7a 27.44%, #2399a0 83.4%);
+  color: var(--color-light);
+  @include xxs {
+    padding: 2em;
+  }
+  .title {
+    color: var(--color-light);
+    @include xxs {
+      font-size: 32px;
     }
   }
 }

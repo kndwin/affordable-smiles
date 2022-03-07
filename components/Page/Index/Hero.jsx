@@ -43,17 +43,6 @@ const Hero = () => {
           <Button className={styles.button}>YOUR SMILE POSSIBLITIES</Button>
         </Link>
       </div>
-      {mounted && sm && (
-        <Dialog
-          trigger={
-            <Button className={`${styles.button} ${styles.bookNow}`}>
-              BOOK NOW
-            </Button>
-          }
-        >
-          <CallToBookDialog />
-        </Dialog>
-      )}
     </div>
   );
 

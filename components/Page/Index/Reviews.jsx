@@ -4,12 +4,12 @@ const Reviews = () => {
   const reviews = [
     {
       review:
-        "“Advanced techniques with modern equipment & a friendly, experienced team. Love their work!”",
+        "“Love their work!”",
       reviewer: "Sharon",
     },
     {
       review:
-        "“Nice. Dentist was very good. Explained each step before doing things. Works around Peoples Disabilities.”",
+        "“Nice. Explained each step before doing things. Works around people's disabilities.”",
       reviewer: "Glenda",
     },
     {

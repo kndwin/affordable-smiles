@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
+import JotFormReact from 'jotform-react'
 
 import styles from "./styles.module.scss";
 import Logo from "../../../public/svg/logo.svg";
@@ -99,10 +100,24 @@ export const Layout = ({ children, isHomePage = false }) => {
                   <div className={styles.iconWithLabel}>
                     <img
                       className={styles.icon}
-                      src="/svg/call.svg"
+                      src="/svg/calendar-white.svg"
                       alt="Calendar icon"
                     />
-                    <a className={styles.label}>Call to book an appointment</a>
+                    <a className={styles.label}>Book an appointment</a>
+                  </div>
+                }
+              >
+                <BookFormDialog />
+              </Dialog>
+              <Dialog
+                trigger={
+                  <div className={styles.iconWithLabel}>
+                    <img
+                      className={styles.icon}
+                      src="/svg/call-white.svg"
+                      alt="Calendar icon"
+                    />
+                    <a className={styles.label}>Call</a>
                   </div>
                 }
               >
@@ -192,5 +207,19 @@ export const CallToBookDialog = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+export const BookFormDialog = () => {
+  return (
+		<div className={styles.bookForm}>
+			<JotFormReact
+				width="100%"
+				scrolling="yes"
+				formURL="https://form.jotform.com/220577284509866"
+				autoResize
+			/>
+			
+		</div>
   );
 };
