@@ -10,9 +10,9 @@ At Affordable Smile, we want the best for our patients. Patients may face variou
 
 ### Who Should Get All-on-4 Fixed Dental Implants?
 
-Anyone who has missing teeth and wants to enjoy a permanent and natural-looking set of teeth will benefit from the full arch implants. These fixed dental implants offer patients a chance to live a healthy and fulfiling lifestyle by replacing teeth with quality implants instead of dentures. 
+These fixed dental implants offer patients a chance to live a healthy and fulfiling lifestyle by replacing teeth with quality implants instead of dentures. 
 
-Patients who are missing multiple teeth or already wear dentures are perfect candidates for a full arch implant. The All-on-4 procedure is more affordable, faster, and doesn’t require high bone density to support the implants. 
+The All-on-4 procedure is more affordable, faster, and doesn’t require high bone density to support the implants. 
 
 ### So What is an All on 4/6 Implant Solution?
 
