@@ -38,6 +38,12 @@ const HealthFunds = () => {
           ))}
         </div>
       </div>
+    </div>
+  );
+};
+
+export default HealthFunds;
+/*
       <div className={styles.superannuation}>
         <div className={styles.content}>
           <h3 className={styles.title}>
@@ -58,8 +64,4 @@ const HealthFunds = () => {
           </p>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default HealthFunds;
+ * */

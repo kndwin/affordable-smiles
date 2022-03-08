@@ -25,7 +25,7 @@ A single tooth implant is a small titanium piece that replaces the lost tooth’
 
 These fixed dental implants offer patients a chance to live a healthy and fulfiling lifestyle by replacing teeth with quality implants instead of dentures. 
 
-Patients who are missing multiple teeth or already wear dentures are candidates for a full arch implant. The All-on-4 procedure is more affordable, faster, and doesn’t require high bone density to support the implants. 
+The All-on-4 procedure is more affordable, faster, and doesn’t require high bone density to support the implants. 
 
 If you are ready to improve your oral health and enhance your smile, contact us today at 1300-715-578 to schedule an appointment.`;
 

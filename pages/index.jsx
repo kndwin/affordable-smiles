@@ -16,7 +16,8 @@ export default function Home() {
       <Hero />
       <DenturesAndImplants />
       <HealthFunds />
-      <Reviews />
     </Layout>
   );
 }
+
+// <Reviews />
